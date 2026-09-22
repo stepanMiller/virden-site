@@ -1,0 +1,24 @@
+import Image from "next/image";
+import type { Product } from "@/content/products";
+
+export function ProductDetails({ product }: { product: Product }) {
+  return (
+    <section className="productDetails shell" aria-labelledby="details-title">
+      <div className="sectionHeading">
+        <p className="eyebrow">Конструкция</p>
+        <h2 id="details-title">Продуманные детали — ощутимая разница</h2>
+      </div>
+      <div className="detailGrid">
+        {product.details.map((detail) => (
+          <article className="detailCard" key={detail.title}>
+            <div className="detailCard__image">
+              <Image src={detail.image} alt={detail.alt} fill sizes="(max-width: 680px) 50vw, 25vw" />
+            </div>
+            <h3>{detail.title}</h3>
+            <p>{detail.description}</p>
+          </article>
+        ))}
+      </div>
+    </section>
+  );
+}
