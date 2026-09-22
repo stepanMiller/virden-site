@@ -48,7 +48,7 @@ content/                     # navigation, homepage copy, product data
 styles/                      # brand tokens and shared styles
 public/assets/
   images/                    # temporary cropped reference placeholders
-  video/                     # future desktop/mobile hero video sources
+  video/                     # optimized desktop/mobile hero video sources
   fonts/                     # future licensed/self-hosted fonts
 docs/
   references/                # supplied approved visual references, not publicly served
@@ -67,13 +67,15 @@ Typography currently uses web-safe temporary stacks: Georgia/Times for display a
 
 ## Hero video contract
 
-`components/media/hero-media.tsx` already contains the video layer. Sources are configured in `content/home.ts` and intentionally set to `null` until approved files arrive.
+`components/media/hero-media.tsx` contains the production-ready video layer. Sources are configured in `content/home.ts`.
 
-- separate desktop/mobile WebM sources;
-- poster fallback;
+- separate desktop/mobile MP4 sources;
+- video-derived JPEG poster fallback;
 - `object-fit: cover` crop;
+- dedicated mobile `object-position` crop;
 - overlay independent from text/navigation;
-- `preload="none"`;
+- `preload="metadata"` with an eager poster;
+- `autoplay`, `muted`, `loop` and `playsInline`;
 - `prefers-reduced-motion` pause and poster fallback.
 
 ## Content status
@@ -87,8 +89,6 @@ See the READMEs inside `public/assets/images/logo`, `public/assets/video` and `p
 1. Original VIRDEN logo in SVG (preferred) plus approved raster fallback.
    The current favicon is intentionally transparent until the original mark is supplied.
 2. Approved product photography in original resolution, without screenshot UI.
-3. Approved homepage hero poster.
-4. Desktop and mobile burgundy-velvet hero videos.
-5. Licensed brand font files, if VIRDEN has fixed corporate typefaces.
-6. Confirmed contact details and legal/company information.
-7. Confirmed product copy, specification, CTA destinations and downloadable PDFs.
+3. Licensed brand font files, if VIRDEN has fixed corporate typefaces.
+4. Confirmed contact details and legal/company information.
+5. Confirmed product copy, specification, CTA destinations and downloadable PDFs.

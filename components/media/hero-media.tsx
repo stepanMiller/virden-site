@@ -52,19 +52,19 @@ export function HeroMedia({ poster, desktopSource, mobileSource, alt }: HeroMedi
         <video
           ref={videoRef}
           className="heroMedia__video"
+          autoPlay={!reducedMotion}
           muted
           loop
           playsInline
-          preload="none"
+          preload="metadata"
           poster={poster}
           aria-hidden="true"
         >
-          {mobileSource ? <source src={mobileSource} media="(max-width: 767px)" type="video/webm" /> : null}
-          {desktopSource ? <source src={desktopSource} media="(min-width: 768px)" type="video/webm" /> : null}
+          {mobileSource ? <source src={mobileSource} media="(max-width: 767px)" type="video/mp4" /> : null}
+          {desktopSource ? <source src={desktopSource} media="(min-width: 768px)" type="video/mp4" /> : null}
         </video>
       ) : null}
       <div className="heroMedia__overlay" aria-hidden="true" />
-      <p className="heroMedia__caption">Временный reference crop · видео подключается отдельным source</p>
     </div>
   );
 }

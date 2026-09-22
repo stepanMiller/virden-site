@@ -20,8 +20,8 @@ export const homeContent = {
 } as const;
 
 export const heroMedia = {
-  poster: "/assets/images/reference/homepage-hero-placeholder.jpg",
-  desktopSource: null,
-  mobileSource: null,
-  alt: "Временный фрагмент утверждённого визуального референса VIRDEN",
+  poster: "/assets/images/reference/virden-hero-poster.jpg",
+  desktopSource: "/assets/video/virden-hero-desktop.mp4",
+  mobileSource: "/assets/video/virden-hero-mobile.mp4",
+  alt: "Интерьер hospitality-объекта с бордовым бархатом и предметами комплексного оснащения",
 } as const;
