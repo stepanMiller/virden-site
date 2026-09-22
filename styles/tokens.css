@@ -1,0 +1,29 @@
+:root {
+  --color-royal-burgundy: #800020;
+  --color-cream: #fffdd0;
+  --color-antique-bronze: #cd7f32;
+
+  --color-ink: #171923;
+  --color-muted: #6d675f;
+  --color-canvas: #fffef2;
+  --color-surface: #fffdf0;
+  --color-line: color-mix(in srgb, var(--color-royal-burgundy) 18%, transparent);
+  --color-burgundy-deep: #520016;
+
+  --font-display: Georgia, "Times New Roman", Times, serif;
+  --font-body: Arial, "Helvetica Neue", Helvetica, sans-serif;
+
+  --container: 80rem;
+  --gutter: clamp(1rem, 3vw, 3rem);
+  --section-space: clamp(4rem, 8vw, 8rem);
+  --radius-sm: 0.125rem;
+  --shadow-soft: 0 1.5rem 4rem rgb(55 24 19 / 0.09);
+}
+
+@theme inline {
+  --color-burgundy: var(--color-royal-burgundy);
+  --color-cream: var(--color-cream);
+  --color-bronze: var(--color-antique-bronze);
+  --font-serif: var(--font-display);
+  --font-sans: var(--font-body);
+}
