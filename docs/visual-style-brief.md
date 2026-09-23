@@ -13,7 +13,7 @@ Private PDFs and internal documents remain local and are not copied into the pub
 
 ## Style sentence
 
-Contemporary hospitality B2B: warm cream space, precise editorial hierarchy, real product texture and controlled burgundy material depth, with bronze reserved for detail-level accents.
+Contemporary hospitality B2B: an ivory page canvas, precise editorial hierarchy, real product texture and controlled burgundy velvet depth, with bronze reserved for detail-level accents.
 
 ## Confirmed tokens
 
@@ -22,6 +22,8 @@ Contemporary hospitality B2B: warm cream space, precise editorial hierarchy, rea
 | Royal Burgundy | `#800020` | CTA, statement surfaces, footer, structural accents |
 | Cream | `#FFFDD0` | warm brand field and light contrast |
 | Antique Bronze | `#CD7F32` | micro-labels and small detail accents |
+
+The brand Cream token remains exact. Large page backgrounds use a near-white ivory (`#FFFEFA`) to match the approved homepage and product references; this is a neutral canvas, not a replacement brand token.
 
 ## Typography
 
@@ -36,7 +38,8 @@ Large burgundy surfaces use layered low-contrast gradients, directional highligh
 ## Composition
 
 - Desktop: asymmetric editorial grid and large production photography.
-- Mobile: single-column narrative, explicit image crop rules and horizontal gallery controls.
+- Homepage hero: approved 16:9 hospitality video fills the desktop composition, with copy, logo, CTA and the small statement as separate HTML layers. The poster is extracted from that video.
+- Mobile: copy precedes the full-width 16:9 master video to preserve the scene without a portrait crop; the product gallery keeps full-frame photography and horizontal gallery controls.
 - Hairlines organize specifications and process information without dashboard styling.
 - Brand, headings, navigation and CTA remain separate HTML/image layers from hero media.
 

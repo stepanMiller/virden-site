@@ -7,6 +7,12 @@ export const homeContent = {
     "Мебель, текстиль, посуда, освещение и amenities — под задачу объекта, с индивидуальным производством и управляемым процессом поставки.",
   primaryCta: "Обсудить проект",
   secondaryCta: "Смотреть продукцию",
+  heroProof: [
+    { title: "Прямые поставки", note: "С заводов Китая" },
+    { title: "Контроль качества", note: "На всех этапах" },
+    { title: "Индивидуальные решения", note: "Под ваш бренд" },
+    { title: "Работаем по договору", note: "На территории РФ" },
+  ],
   principles: [
     "Не подбираем похожее. Производим нужное.",
     "За красивым объектом — управляемая supply chain.",
@@ -43,8 +49,8 @@ export const homeContent = {
 } as const;
 
 export const heroMedia = {
-  poster: assetPath("/assets/hero/hospitality-bathrobe.webp"),
+  poster: assetPath("/assets/hero/virden-hero-poster.jpg"),
   desktopSource: assetPath("/assets/video/virden-hero-desktop.mp4"),
-  mobileSource: assetPath("/assets/video/virden-hero-desktop.mp4"),
-  alt: "Комплексное оснащение hospitality-объекта VIRDEN с бордовым бархатом",
+  mobileSource: null,
+  alt: "Интерьер hospitality с креслом, сервировкой, текстилем, amenities и бордовым бархатом",
 } as const;

@@ -12,7 +12,8 @@ type HeroMediaProps = {
 
 export function HeroMedia({ poster, desktopSource, mobileSource, alt }: HeroMediaProps) {
   const videoRef = useRef<HTMLVideoElement>(null);
-  const [reducedMotion, setReducedMotion] = useState(true);
+  const [reducedMotion, setReducedMotion] = useState(false);
+  const [videoReady, setVideoReady] = useState(false);
   const hasVideo = Boolean(desktopSource || mobileSource);
 
   useEffect(() => {
@@ -52,6 +53,7 @@ export function HeroMedia({ poster, desktopSource, mobileSource, alt }: HeroMedi
         <video
           ref={videoRef}
           className="heroMedia__video"
+          data-ready={videoReady}
           autoPlay={!reducedMotion}
           muted
           loop
@@ -59,9 +61,11 @@ export function HeroMedia({ poster, desktopSource, mobileSource, alt }: HeroMedi
           preload="metadata"
           poster={poster}
           aria-hidden="true"
+          onLoadedData={() => setVideoReady(true)}
+          onError={() => setVideoReady(false)}
         >
           {mobileSource ? <source src={mobileSource} media="(max-width: 767px)" type="video/mp4" /> : null}
-          {desktopSource ? <source src={desktopSource} media="(min-width: 768px)" type="video/mp4" /> : null}
+          {desktopSource ? <source src={desktopSource} type="video/mp4" /> : null}
         </video>
       ) : null}
       <div className="heroMedia__overlay" aria-hidden="true" />

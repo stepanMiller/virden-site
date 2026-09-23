@@ -4,9 +4,9 @@
   --color-antique-bronze: #cd7f32;
 
   --color-ink: #20252b;
-  --color-muted: #69645d;
-  --color-canvas: #f7f4ee;
-  --color-surface: #fcfaf6;
+  --color-muted: #54575a;
+  --color-canvas: #fffefa;
+  --color-surface: #f8f7f3;
   --color-line: color-mix(in srgb, var(--color-royal-burgundy) 18%, transparent);
   --color-burgundy-deep: #4b0013;
   --color-burgundy-shadow: #2d000c;
