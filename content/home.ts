@@ -44,7 +44,7 @@ export const homeContent = {
 
 export const heroMedia = {
   poster: assetPath("/assets/hero/hospitality-bathrobe.webp"),
-  desktopSource: null,
-  mobileSource: null,
-  alt: "Вафельный халат VIRDEN в светлом SPA-интерьере",
+  desktopSource: assetPath("/assets/video/virden-hero-desktop.mp4"),
+  mobileSource: assetPath("/assets/video/virden-hero-mobile.mp4"),
+  alt: "Комплексное оснащение hospitality-объекта VIRDEN с бордовым бархатом",
 } as const;
