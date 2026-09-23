@@ -2,22 +2,23 @@ import Image from "next/image";
 import type { Product } from "@/content/products";
 
 export function Personalization({ product }: { product: Product }) {
+  const personalizationImage = product.gallery.find((image) => image.label === "Вышивка") ?? product.gallery[0];
+
   return (
     <section className="personalization" id="personalization" aria-labelledby="personalization-title">
       <div className="personalization__media">
         <Image
-          src="/assets/images/products/bathrobe/bathrobe-detail-logo-placeholder.jpg"
-          alt="Временный фрагмент референса персонализации"
+          src={personalizationImage.src}
+          alt={personalizationImage.alt}
           fill
+          quality={92}
           sizes="(max-width: 800px) 100vw, 38vw"
         />
       </div>
       <div className="personalization__content">
         <p className="eyebrow">Индивидуальное производство</p>
         <h2 id="personalization-title">Персонализация под ваш бренд</h2>
-        <p>
-          Возможности показаны как структура будущего предложения. Доступность каждой опции подтверждается в проектной спецификации.
-        </p>
+        <p>Вышивка, цвет окантовки, размерная сетка и упаковка собираются в единое решение под фирменный стиль объекта.</p>
         <div className="personalization__options">
           {product.personalization.map((option, index) => (
             <div key={option.title}>
@@ -30,7 +31,7 @@ export function Personalization({ product }: { product: Product }) {
       </div>
       <blockquote>
         <p>«Не подбираем похожее. Производим нужное.»</p>
-        <cite>Смысловая опора VIRDEN</cite>
+        <cite>Принцип VIRDEN</cite>
       </blockquote>
     </section>
   );

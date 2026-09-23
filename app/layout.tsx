@@ -8,6 +8,12 @@ export const metadata: Metadata = {
   },
   description:
     "Комплексное оснащение отелей, ресторанов, SPA и коммерческих объектов.",
+  openGraph: {
+    title: "VIRDEN — комплексное оснащение hospitality-объектов",
+    description: "Мебель, текстиль, посуда, освещение, amenities и индивидуальное производство.",
+    type: "website",
+    locale: "ru_RU",
+  },
   robots: {
     index: true,
     follow: true,

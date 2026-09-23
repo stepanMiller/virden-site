@@ -22,7 +22,7 @@ export async function generateMetadata({ params }: ProductPageProps): Promise<Me
 
   return {
     title: product.name,
-    description: `${product.category}. Статический production-прототип карточки продукта VIRDEN.`,
+    description: `${product.category}. Фотографии, детали, характеристики и возможности персонализации VIRDEN.`,
   };
 }
 
@@ -60,6 +60,18 @@ export default async function ProductPage({ params }: ProductPageProps) {
         <ProductDetails product={product} />
         <Personalization product={product} />
         <QualitySection product={product} />
+        <section className="productClosing materialBurgundy" aria-labelledby="product-closing-title">
+          <div className="shell productClosing__inner">
+            <div>
+              <p className="eyebrow eyebrow--light">VIRDEN</p>
+              <h2 id="product-closing-title">Продукт под стандарт вашего объекта</h2>
+              <p>Финальные параметры, образец и комплектация согласуются в проектной спецификации.</p>
+            </div>
+            <Link className="productClosing__link" href="#project-request">
+              Обсудить поставку <span aria-hidden="true">→</span>
+            </Link>
+          </div>
+        </section>
       </main>
       <SiteFooter />
     </>

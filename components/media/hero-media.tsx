@@ -44,8 +44,8 @@ export function HeroMedia({ poster, desktopSource, mobileSource, alt }: HeroMedi
         src={poster}
         alt={alt}
         fill
-        loading="eager"
-        fetchPriority="high"
+        priority
+        quality={92}
         sizes="(max-width: 800px) 100vw, 46vw"
       />
       {hasVideo ? (

@@ -1,94 +1,80 @@
-# VIRDEN site — production stage 1
+# VIRDEN — first production pass
 
-Первый production-прототип B2B-сайта VIRDEN. На этом этапе реализованы только homepage hero и универсальная product page на маршруте `/products/bathrobe`.
+Responsive B2B website foundation for VIRDEN. The current review scope contains two control pages:
+
+- homepage `/`;
+- reusable product template at `/products/bathrobe`.
 
 ## Stack
 
-- Next.js 16.3.5, App Router
-- React 19
-- TypeScript (strict)
-- Tailwind CSS 4 через PostCSS
-- ESLint 9 + `eslint-config-next`
+- Next.js 16.3.5, App Router;
+- React 19 and TypeScript;
+- Tailwind CSS 4 through PostCSS;
+- ESLint 9;
+- static export for GitHub Pages.
 
-## Локальный запуск
+## Local development
 
-Требуется Node.js 20.9+ и pnpm 11.
+Node.js 24 and pnpm 11 are recommended.
 
 ```bash
 pnpm install
 pnpm dev
 ```
 
-Откройте:
+Open:
 
 - `http://localhost:3000/`
-- `http://localhost:3000/products/bathrobe`
+- `http://localhost:3000/products/bathrobe/`
 
-Проверки:
+Checks:
 
 ```bash
 pnpm lint
 pnpm build
-pnpm start
 ```
 
-## Структура
+The static build is written to `out/`.
+
+## GitHub Pages preview
+
+`.github/workflows/deploy-pages.yml` builds this branch with `NEXT_PUBLIC_BASE_PATH=/virden-site` and publishes `out/` through GitHub Pages. No custom domain or DNS change is part of this workflow.
+
+For a later custom domain build, leave `NEXT_PUBLIC_BASE_PATH` empty and set `NEXT_PUBLIC_SITE_URL` to the confirmed origin.
+
+## Project structure
 
 ```text
-app/                         # App Router, metadata, routes
-  products/[slug]/           # универсальный product route
+app/                              # routes, metadata and page composition
 components/
-  layout/                    # header, footer, logo asset slot
-  media/                     # video-ready hero media
-  ui/                        # базовые UI-примитивы
+  layout/                         # logo, header and footer
+  media/                          # image/video-ready hero media layer
+  ui/                             # shared action primitive
 sections/
-  home/                      # homepage hero
-  product/                   # gallery, overview, details, personalization, quality
-content/                     # navigation, homepage copy, product data
-styles/                      # brand tokens and shared styles
+  home/                           # homepage hero and narrative sections
+  product/                        # gallery, overview, details, personalization, QC
+content/                          # navigation and UI-independent page data
+lib/                              # deployment path helpers
+styles/                           # design tokens and responsive visual system
 public/assets/
-  images/                    # temporary cropped reference placeholders
-  video/                     # optimized desktop/mobile hero video sources
-  fonts/                     # future licensed/self-hosted fonts
-docs/
-  references/                # supplied approved visual references, not publicly served
-  visual-style-brief.md      # implementation reading of approved references
+  brand/                          # extracted approved VIRDEN lockup
+  hero/                           # approved high-resolution static hero asset
+  products/bathrobe/              # seven separate production images
+  categories/                     # waiting for approved category photography
+  video/                          # approved velvet motion assets, currently disabled
+docs/                             # implementation brief and supplied visual references
 ```
 
-## Design tokens
+## Confirmed visual system
 
-Tokens live in `styles/tokens.css`:
+- Royal Burgundy `#800020`;
+- Cream `#FFFDD0`;
+- Antique Bronze `#CD7F32`;
+- temporary web-safe Bodoni/Didot-style serif stack for display copy;
+- temporary geometric sans stack for body and interface copy.
 
-- Royal Burgundy — `#800020`
-- Cream — `#FFFDD0`
-- Antique Bronze — `#CD7F32`
+No commercial font is asserted or bundled.
 
-Typography currently uses web-safe temporary stacks: Georgia/Times for display and Arial/Helvetica for interface copy. No commercial font is asserted or bundled.
+## Current content status
 
-## Hero video contract
-
-`components/media/hero-media.tsx` contains the production-ready video layer. Sources are configured in `content/home.ts`.
-
-- separate desktop/mobile MP4 sources;
-- video-derived JPEG poster fallback;
-- `object-fit: cover` crop;
-- dedicated mobile `object-position` crop;
-- overlay independent from text/navigation;
-- `preload="metadata"` with an eager poster;
-- `autoplay`, `muted`, `loop` and `playsInline`;
-- `prefers-reduced-motion` pause and poster fallback.
-
-## Content status
-
-Commercial facts, contacts, product specifications and operational promises have not been invented. Any temporary product copy is explicitly marked as demonstration content in the interface and stored separately in `content/products.ts`.
-
-## Required real assets
-
-See the READMEs inside `public/assets/images/logo`, `public/assets/video` and `public/assets/fonts`. At minimum the next pass needs:
-
-1. Original VIRDEN logo in SVG (preferred) plus approved raster fallback.
-   The current favicon is intentionally transparent until the original mark is supplied.
-2. Approved product photography in original resolution, without screenshot UI.
-3. Licensed brand font files, if VIRDEN has fixed corporate typefaces.
-4. Confirmed contact details and legal/company information.
-5. Confirmed product copy, specification, CTA destinations and downloadable PDFs.
+The bathrobe specification follows the approved product-page reference and remains marked for final technical confirmation. Contact details, legal requisites, downloadable specification, category photography beyond textiles and confirmed commercial conditions are intentionally not invented.

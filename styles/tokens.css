@@ -3,21 +3,22 @@
   --color-cream: #fffdd0;
   --color-antique-bronze: #cd7f32;
 
-  --color-ink: #171923;
-  --color-muted: #6d675f;
-  --color-canvas: #fffef2;
-  --color-surface: #fffdf0;
+  --color-ink: #20252b;
+  --color-muted: #69645d;
+  --color-canvas: #fffdf1;
+  --color-surface: #fbf7eb;
   --color-line: color-mix(in srgb, var(--color-royal-burgundy) 18%, transparent);
-  --color-burgundy-deep: #520016;
+  --color-burgundy-deep: #4b0013;
+  --color-burgundy-shadow: #2d000c;
 
-  --font-display: Georgia, "Times New Roman", Times, serif;
-  --font-body: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  --font-display: "Bodoni 72", Didot, "Iowan Old Style", Georgia, "Times New Roman", serif;
+  --font-body: "Avenir Next", Avenir, Montserrat, "Helvetica Neue", Arial, sans-serif;
 
-  --container: 80rem;
+  --container: 90rem;
   --gutter: clamp(1rem, 3vw, 3rem);
   --section-space: clamp(4rem, 8vw, 8rem);
-  --radius-sm: 0.125rem;
-  --shadow-soft: 0 1.5rem 4rem rgb(55 24 19 / 0.09);
+  --radius-sm: 0.1rem;
+  --shadow-soft: 0 1.5rem 4rem rgb(55 24 19 / 0.11);
 }
 
 @theme inline {

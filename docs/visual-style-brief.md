@@ -1,93 +1,56 @@
-# VIRDEN visual style brief — stage 1
+# VIRDEN visual implementation brief
 
-This is an implementation reading of the supplied approved references, not a replacement for a brand book.
+This document records the implementation reading of the approved VIRDEN brand book and supplied control references. It does not replace the brand book.
 
-## 1. Task and mode
+## Sources and priority
 
-- Project: VIRDEN production site, stage 1.
-- Format: responsive web prototype.
-- Mode: client reading.
-- Goal: communicate controlled, contemporary hospitality procurement without visual logistics clichés.
+1. VIRDEN brand book: palette, materiality, archetypes and current woven V mark.
+2. Approved homepage reference: cream editorial field, hospitality visual, restrained burgundy accent, compact B2B navigation.
+3. Approved bathrobe product-page reference: image-led gallery, dense but calm product information, details, personalization and quality logic.
+4. Production bathrobe photography: seven high-resolution individual images supplied by the client.
 
-## 2. Sources
+Private PDFs and internal documents remain local and are not copied into the public repository.
 
-| Source | Type | What is used | Rights status | Limitation |
-|---|---|---|---|---|
-| `references/homepage-approved-reference.jpg` | supplied screenshot | homepage composition, hero balance, navigation density | supplied by client | static desktop-only view |
-| `references/product-approved-reference.jpg` | supplied screenshot | product hierarchy, gallery, specifications, details, personalization, trust | supplied by client | static desktop-only view |
-| written brief | confirmed requirements | palette, messaging, categories, prohibitions | confirmed | real content/assets still pending |
+## Style sentence
 
-## 3. Style sentence
+Contemporary hospitality B2B: warm cream space, precise editorial hierarchy, real product texture and controlled burgundy material depth, with bronze reserved for detail-level accents.
 
-Restrained hospitality editorial: a strict commercial grid, warm cream field, burgundy functional accents and large serif meaning layers supported by neutral sans UI copy.
+## Confirmed tokens
 
-## 4. Visual rules
+| Role | Value | Use |
+|---|---|---|
+| Royal Burgundy | `#800020` | CTA, statement surfaces, footer, structural accents |
+| Cream | `#FFFDD0` | warm brand field and light contrast |
+| Antique Bronze | `#CD7F32` | micro-labels and small detail accents |
 
-### Palette
+## Typography
 
-| Role | Value | Status | Use |
-|---|---|---|---|
-| Royal Burgundy | `#800020` | confirmed | CTA, navigation accents, key labels |
-| Cream | `#FFFDD0` | confirmed | brand surface and warm field |
-| Antique Bronze | `#CD7F32` | confirmed | small detail accents only |
-| Ink | near-black | inferred | primary reading text |
+- Display: temporary Bodoni/Didot-style web-safe stack; regular weight, close leading, editorial scale.
+- Interface/body: temporary geometric sans stack; compact labels, open body leading.
+- Licensed brand files can replace either stack without changing component structure.
 
-### Typography
+## Materiality
 
-| Role | Current temporary stack | Replacement path | Rule |
-|---|---|---|---|
-| Display | Georgia / Times | approved licensed Bodoni/Didot-style file | large, regular weight, tight leading |
-| Interface/body | Arial / Helvetica | approved geometric sans file | restrained weight, open leading, uppercase micro-labels |
+Large burgundy surfaces use layered low-contrast gradients, directional highlights, a fine grain pattern and a restrained vignette. The treatment stays within burgundy/deep-red values and avoids magenta, gloss and ornamental luxury effects.
 
-### Composition
+## Composition
 
-- Wide desktop shell with 2-column hero and product overview.
-- Deliberate asymmetry comes from image/text proportion, not decorative shapes.
-- Fine hairlines organize dense B2B information.
-- Mobile changes order and column count without changing meaning or visual grammar.
+- Desktop: asymmetric editorial grid and large production photography.
+- Mobile: single-column narrative, explicit image crop rules and horizontal gallery controls.
+- Hairlines organize specifications and process information without dashboard styling.
+- Brand, headings, navigation and CTA remain separate HTML/image layers from hero media.
 
-### Images, light and texture
+## Prohibitions
 
-- Warm neutral hospitality interiors and close product details.
-- Soft directional light, restrained contrast, real material texture.
-- Reference crops are temporary and are explicitly labelled in the prototype.
+- No China clichés, flags, ships, containers, routes or generic logistics imagery.
+- No invented logo, altered proportions or alternate brand mark.
+- No generated testimonials, clients, cases, metrics, promises or certificates.
+- No screenshot crops or collage fragments as production photography.
+- No excessive classic luxury, gold decoration, glossy burgundy or magenta drift.
 
-### Motion
+## Current open items
 
-- Future hero motion is limited to the burgundy velvet media layer.
-- All copy, logo, navigation and CTA remain independent HTML/SVG layers.
-- Reduced-motion users receive the approved poster instead of autoplay motion.
-
-## 5. Allowed techniques
-
-1. Large editorial serif headlines.
-2. Fine burgundy rules and compact uppercase sans labels.
-3. Cropped product/material photography on a strict grid.
-4. Burgundy blocks for primary commercial actions.
-5. Bronze only as a detail-level accent.
-
-## 6. Prohibitions
-
-1. No red/gold China clichés, flags, ships, containers or route maps.
-2. No invented logo or altered logo proportions.
-3. No heavy classic luxury ornament.
-4. No invented cases, reviews, figures or promises.
-5. No typography baked into hero video.
-
-## 7. Control screens
-
-### Homepage hero
-
-Serif promise and B2B copy on cream; separate burgundy velvet media panel; categories visible within the first narrative section.
-
-### Product page
-
-Image-led gallery paired with purchase information, benefits, specifications and clear CTA; detailed imagery follows below.
-
-### Product data block
-
-Specification rows use hairline separators and compact sans labels; missing source data is shown as pending, never invented.
-
-## 8. Confidence and open items
-
-Palette and semantic direction are confirmed by the brief. Typeface identity, logo files, photography, video, product facts and final contact details require client-provided originals.
+- Confirmed phone, email, legal requisites and CTA delivery channel.
+- Final technical bathrobe specification and downloadable document.
+- Approved high-resolution photography for furniture, tableware, lighting and amenities.
+- Licensed/self-hosted brand fonts, if fixed font files exist.
