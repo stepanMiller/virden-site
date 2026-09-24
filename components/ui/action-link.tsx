@@ -10,7 +10,7 @@ export function ActionLink({ href, children, variant = "primary" }: ActionLinkPr
   return (
     <Link className={`actionLink actionLink--${variant}`} href={href}>
       <span>{children}</span>
-      <span aria-hidden="true">↗</span>
+      <span className="actionLink__arrow" aria-hidden="true">→</span>
     </Link>
   );
 }
