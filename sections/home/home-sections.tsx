@@ -105,7 +105,7 @@ export function HomeOperations() {
       <section className="operations shell" aria-labelledby="operations-title">
         <div className="sectionIntro sectionIntro--wide">
           <p className="eyebrow">Управляемый процесс</p>
-          <h2 id="operations-title">За красивым объектом — управляемая supply chain.</h2>
+          <h2 id="operations-title">За красивым объектом — управляемая цепочка поставок.</h2>
           <p>Визуальное решение связано с образцами, спецификацией, производством, контролем и комплектацией.</p>
         </div>
         <div className="capabilityGrid">
@@ -128,7 +128,6 @@ export function HomeOperations() {
           <div className="reliability__points">
             <p>Состав поставки и параметры продукта закрепляются в спецификации.</p>
             <p>Порядок согласования, приёмки и оплаты определяется договором.</p>
-            <p className="structuralPlaceholder">Реквизиты и конкретная платёжная схема будут опубликованы после подтверждения.</p>
           </div>
         </div>
       </section>
