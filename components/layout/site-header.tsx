@@ -17,10 +17,10 @@ export function SiteHeader() {
           ))}
         </nav>
         <Link className="headerCta" href="/#project-request">
-          Запросить КП
+          <span>Запросить КП</span><span className="headerCta__arrow" aria-hidden="true">→</span>
         </Link>
         <details className="mobileMenu">
-          <summary>Меню</summary>
+          <summary aria-label="Открыть меню"><span>Меню</span><span className="mobileMenu__icon" aria-hidden="true"><i /><i /><i /></span></summary>
           <nav aria-label="Мобильная навигация">
             {primaryNavigation.map((item) => (
               <Link href={item.href} key={item.href}>

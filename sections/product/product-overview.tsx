@@ -29,12 +29,15 @@ export function ProductOverview({ product }: { product: Product }) {
         ))}
       </div>
 
-      <div className="productOverview__actions">
-        <ActionLink href="#project-request">Запросить коммерческое предложение</ActionLink>
-        <ActionLink href="#personalization" variant="secondary">
-          Обсудить образец
-        </ActionLink>
-      </div>
+    </div>
+  );
+}
+
+export function ProductActions() {
+  return (
+    <div className="productOverview__actions">
+      <ActionLink href="#project-request">Запросить коммерческое предложение</ActionLink>
+      <ActionLink href="#personalization" variant="secondary">Обсудить образец</ActionLink>
     </div>
   );
 }

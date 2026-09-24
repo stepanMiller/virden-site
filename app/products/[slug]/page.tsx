@@ -7,7 +7,7 @@ import { getProductBySlug, products } from "@/content/products";
 import { Personalization } from "@/sections/product/personalization";
 import { ProductDetails } from "@/sections/product/product-details";
 import { ProductGallery } from "@/sections/product/product-gallery";
-import { ProductOverview } from "@/sections/product/product-overview";
+import { ProductActions, ProductOverview } from "@/sections/product/product-overview";
 import { QualitySection } from "@/sections/product/quality-section";
 
 type ProductPageProps = {
@@ -53,9 +53,10 @@ export default async function ProductPage({ params }: ProductPageProps) {
             mainImage={product.mainImage}
             mainImageAlt={product.mainImageAlt}
           />
-          <div id="product-title">
+          <div className="productHero__info" id="product-title">
             <ProductOverview product={product} />
           </div>
+          <ProductActions />
         </section>
         <ProductDetails product={product} />
         <Personalization product={product} />

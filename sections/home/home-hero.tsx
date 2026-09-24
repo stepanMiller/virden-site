@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { HeroMedia } from "@/components/media/hero-media";
 import { ActionLink } from "@/components/ui/action-link";
 import { heroMedia, homeContent } from "@/content/home";
@@ -17,6 +18,9 @@ export function HomeHero() {
   return (
     <section className="homeHero" aria-labelledby="home-hero-title">
       <div className="homeHero__layout shell">
+        <div className="homeHero__material" aria-hidden="true">
+          <Image src={heroMedia.poster} alt="" fill priority quality={92} sizes="(max-width: 720px) 45vw, 1px" />
+        </div>
         <div className="homeHero__visual">
           <HeroMedia {...heroMedia} />
         </div>

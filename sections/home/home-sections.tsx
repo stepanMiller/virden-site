@@ -7,6 +7,17 @@ import { assetPath } from "@/lib/site-path";
 export function HomeDirections() {
   return (
     <section className="homeDirections shell" id="directions" aria-labelledby="directions-title">
+      <div className="homeDirections__mobileIntro">
+        <div>
+          <p className="eyebrow">Направления</p>
+          <h2>Больше, чем поставки. Партнёрство, которое работает.</h2>
+          <p>{homeContent.description}</p>
+          <Link href="#project-request">Обсудить проект <span aria-hidden="true">→</span></Link>
+        </div>
+        <div className="homeDirections__mobileImage">
+          <Image src={assetPath("/assets/products/bathrobe/bathrobe-embroidery.webp")} alt="Вафельный текстиль с вышивкой VIRDEN" fill quality={92} sizes="(max-width: 720px) 34vw, 1px" />
+        </div>
+      </div>
       <div className="sectionIntro">
         <p className="eyebrow">Направления</p>
         <h2 id="directions-title">Всё для цельного опыта гостя</h2>
