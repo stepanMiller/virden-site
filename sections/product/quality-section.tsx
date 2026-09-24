@@ -7,7 +7,7 @@ export function QualitySection({ product }: { product: Product }) {
         <p className="eyebrow">Quality / trust</p>
         <h2 id="quality-title">Качество, встроенное в процесс</h2>
         <p className="qualitySection__lead">
-          За красивым объектом — управляемая supply chain. Образец и спецификация становятся контрольной точкой для производства и комплектации.
+          За красивым объектом — управляемая цепочка поставок. Образец и спецификация становятся контрольной точкой для производства и комплектации.
         </p>
       </div>
       <div className="qualitySection__grid">

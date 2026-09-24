@@ -58,10 +58,10 @@ lib/                              # deployment path helpers
 styles/                           # design tokens and responsive visual system
 public/assets/
   brand/                          # extracted approved VIRDEN lockup
-  hero/                           # approved high-resolution static hero asset
+  hero/                           # approved hero poster and supporting imagery
   products/bathrobe/              # seven separate production images
-  categories/                     # waiting for approved category photography
-  video/                          # approved velvet motion assets, currently disabled
+  categories/                     # approved production/category visuals
+  video/                          # approved 16:9 velvet hero motion
 docs/                             # implementation brief and supplied visual references
 ```
 
@@ -77,4 +77,4 @@ No commercial font is asserted or bundled.
 
 ## Current content status
 
-The bathrobe specification follows the approved product-page reference and remains marked for final technical confirmation. Contact details, legal requisites, downloadable specification, category photography beyond textiles and confirmed commercial conditions are intentionally not invented.
+The bathrobe page uses the confirmed specification and seven separate product images. The homepage contains the seven launch directions and the confirmed five-stage production and delivery process. Contact details, legal requisites, downloadable specification and unconfirmed commercial conditions are intentionally not invented.

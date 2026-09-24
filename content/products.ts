@@ -30,7 +30,6 @@ export type Product = {
   name: string;
   lead: string;
   description: string;
-  contentStatus: string;
   mainImage: string;
   mainImageAlt: string;
   gallery: ProductImage[];
@@ -91,8 +90,6 @@ export const products: Product[] = [
     lead: "Комфорт. Статус. Забота в деталях.",
     description:
       "Двухслойный халат для отелей и SPA: с одной стороны вафельная ткань, с другой — махровая. Шалевый воротник, контрастная бейка и возможность брендирования под фирменный стиль объекта.",
-    contentStatus:
-      "Характеристики приведены по утверждённому макету и требуют финального подтверждения в технической спецификации.",
     mainImage: bathrobeGallery[0].src,
     mainImageAlt: bathrobeGallery[0].alt,
     gallery: bathrobeGallery,

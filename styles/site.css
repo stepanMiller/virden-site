@@ -841,14 +841,6 @@ button {
   color: var(--color-muted);
 }
 
-.contentNotice {
-  margin: 1.2rem 0 0;
-  border-left: 0.12rem solid var(--color-antique-bronze);
-  padding: 0.65rem 0.8rem;
-  background: var(--color-surface);
-  color: var(--color-muted);
-  font-size: 0.7rem;
-}
 
 .benefitGrid {
   display: grid;
@@ -1702,7 +1694,7 @@ button {
     grid-template-columns: 1fr;
   }
 
-  .qualitySection__grid article:nth-child(even) {
+.qualitySection__grid article:nth-child(even) {
     border-left: 0;
   }
 
@@ -1712,6 +1704,329 @@ button {
 
   .siteFooter__grid {
     grid-template-columns: 1fr;
+  }
+}
+
+/* V1 categories and expanded production process */
+.directionCards {
+  gap: 1.1rem;
+  border: 0;
+}
+
+.directionCard {
+  min-width: 0;
+  overflow: hidden;
+  border: 1px solid var(--color-line);
+  background: var(--color-canvas);
+}
+
+.directionCards .directionCard {
+  min-height: 0;
+  padding: 0;
+}
+
+.directionCard__media {
+  position: relative;
+  aspect-ratio: 1.38;
+  overflow: hidden;
+  background: var(--color-surface);
+}
+
+.directionCard__media img {
+  object-fit: cover;
+  transition: transform 400ms ease;
+}
+
+.directionCard:hover .directionCard__media img {
+  transform: scale(1.025);
+}
+
+.directionCard__body {
+  position: relative;
+  min-height: 11.5rem;
+  padding: 1.35rem 1.45rem 2.5rem;
+}
+
+.directionCards .directionCard h3 {
+  max-width: 18rem;
+  margin: 0.85rem 0 0.55rem;
+  font-size: clamp(1.55rem, 2.2vw, 2.25rem);
+}
+
+.directionCards .directionCard p {
+  max-width: 21rem;
+  padding-right: 1.3rem;
+  font-size: 0.8rem;
+  line-height: 1.45;
+}
+
+.directionCard__link,
+.directionCard__arrow {
+  position: absolute;
+  right: 1.45rem;
+  bottom: 1.2rem;
+  color: var(--color-royal-burgundy);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+.directionCard__link {
+  border-bottom: 1px solid currentColor;
+  padding-bottom: 0.15rem;
+  text-transform: uppercase;
+}
+
+.directionCard__link span {
+  margin-left: 0.6rem;
+  color: inherit;
+  font-size: 1rem;
+}
+
+.directionCard:last-child {
+  display: grid;
+  grid-column: 1 / -1;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+}
+
+.directionCard:last-child .directionCard__media {
+  aspect-ratio: auto;
+  min-height: 18rem;
+}
+
+.directionCard:last-child .directionCard__body {
+  display: flex;
+  min-height: 18rem;
+  flex-direction: column;
+  justify-content: center;
+  padding: clamp(1.5rem, 4vw, 3rem);
+}
+
+.directionCard:last-child .directionCard__arrow {
+  right: 2rem;
+  bottom: 1.4rem;
+}
+
+.selectedProduct__copy .actionLink {
+  margin-top: 1.8rem;
+}
+
+.homeOem {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 0.95fr);
+  gap: clamp(2rem, 7vw, 7rem);
+  align-items: center;
+  padding-block: var(--section-space);
+  border-top: 1px solid var(--color-line);
+}
+
+.homeOem h2 {
+  max-width: 42rem;
+  margin: 1.3rem 0 1.7rem;
+  font-family: var(--font-display);
+  font-size: clamp(2.6rem, 4.8vw, 5rem);
+  font-weight: 400;
+  letter-spacing: -0.045em;
+  line-height: 0.98;
+}
+
+.homeOem__copy > p:not(.eyebrow) {
+  max-width: 34rem;
+  color: var(--color-muted);
+}
+
+.homeOem__media {
+  position: relative;
+  min-height: 28rem;
+  aspect-ratio: 1.2;
+  overflow: hidden;
+  background: var(--color-surface);
+}
+
+.homeOem__media img {
+  object-fit: cover;
+}
+
+.homeProcess__lead {
+  display: grid;
+  grid-template-columns: minmax(0, 1.3fr) minmax(14rem, 0.7fr);
+  align-items: end;
+  gap: clamp(2rem, 6vw, 7rem);
+  margin-top: clamp(2.5rem, 5vw, 5rem);
+  padding-bottom: 2rem;
+}
+
+.homeProcess__lead h3 {
+  max-width: 54rem;
+  margin: 0;
+  color: var(--color-royal-burgundy);
+  font-family: var(--font-display);
+  font-size: clamp(2.6rem, 5vw, 5.3rem);
+  font-weight: 400;
+  letter-spacing: -0.045em;
+  line-height: 0.99;
+}
+
+.homeProcess__lead p {
+  max-width: 23rem;
+  margin: 0;
+  color: var(--color-muted);
+}
+
+.homeProcess ol {
+  display: block;
+  margin-top: 0;
+}
+
+.homeProcess .homeProcess__step {
+  display: grid;
+  min-height: 0;
+  grid-template-columns: minmax(4rem, 0.16fr) minmax(13rem, 0.42fr) minmax(0, 0.92fr);
+  align-items: start;
+  gap: clamp(1.2rem, 3vw, 3rem);
+  border-top: 1px solid var(--color-line);
+  border-right: 0;
+  padding: clamp(1.8rem, 3vw, 3rem) 0;
+}
+
+.homeProcess__number {
+  color: var(--color-antique-bronze);
+  font-family: var(--font-display);
+  font-size: clamp(2.8rem, 5vw, 5.2rem) !important;
+  font-weight: 400 !important;
+  line-height: 0.95;
+}
+
+.homeProcess__title h4 {
+  max-width: 18rem;
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: clamp(1.8rem, 2.45vw, 2.8rem);
+  font-weight: 400;
+  line-height: 1.03;
+}
+
+.homeProcess__body > p,
+.homeProcess__scenarios p {
+  margin: 0 0 0.9rem !important;
+  color: var(--color-muted);
+  font-family: var(--font-body) !important;
+  font-size: 0.94rem !important;
+  line-height: 1.55 !important;
+}
+
+.homeProcess__scenarios {
+  display: grid;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.homeProcess__scenarios > div {
+  border-left: 1px solid var(--color-line);
+  padding-left: 1rem;
+}
+
+.homeProcess__scenarios strong {
+  display: block;
+  margin-bottom: 0.35rem;
+  color: var(--color-royal-burgundy);
+  font-size: 0.8rem;
+}
+
+@media (max-width: 1100px) {
+  .directionCards {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .homeOem__media {
+    min-height: 25rem;
+    aspect-ratio: auto;
+  }
+
+  .homeProcess .homeProcess__step {
+    grid-template-columns: 4rem minmax(0, 0.48fr) minmax(0, 1fr);
+  }
+}
+
+@media (max-width: 800px) {
+  .homeOem {
+    grid-template-columns: 1fr;
+  }
+
+  .homeOem__media {
+    min-height: 21rem;
+    aspect-ratio: 1.7;
+  }
+
+  .homeProcess__lead {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .homeProcess .homeProcess__step {
+    grid-template-columns: 4rem minmax(0, 1fr);
+  }
+
+  .homeProcess__body {
+    grid-column: 2;
+  }
+}
+
+@media (max-width: 720px) {
+  .directionCards {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .directionCard:last-child {
+    display: block;
+  }
+
+  .directionCard:last-child .directionCard__media {
+    aspect-ratio: 1.38;
+    min-height: 0;
+  }
+
+  .directionCard:last-child .directionCard__body {
+    display: block;
+    min-height: 11.5rem;
+    padding: 1.35rem 1.45rem 2.5rem;
+  }
+
+  .homeProcess__lead h3 {
+    font-size: clamp(2.55rem, 11vw, 4rem);
+  }
+
+  .homeProcess .homeProcess__step {
+    display: grid;
+    grid-template-columns: 3.3rem minmax(0, 1fr);
+    align-items: start;
+    gap: 0.5rem 0.85rem;
+    padding: 1.7rem 0;
+  }
+
+  .homeProcess__number {
+    font-size: 2.8rem !important;
+  }
+
+  .homeProcess__title h4 {
+    font-size: 1.9rem;
+  }
+
+  .homeProcess__body > p,
+  .homeProcess__scenarios p {
+    font-size: 0.85rem !important;
+  }
+
+  .homeOem__media {
+    min-height: 18rem;
+    aspect-ratio: 1.2;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .directionCard__media img {
+    transition: none;
   }
 }
 
@@ -2086,13 +2401,6 @@ button {
   .productOverview__description {
     font-size: 0.6rem;
     line-height: 1.42;
-  }
-
-  .contentNotice {
-    margin-top: 0.65rem;
-    padding: 0.4rem 0.5rem;
-    font-size: 0.5rem;
-    line-height: 1.35;
   }
 
   .benefitGrid {

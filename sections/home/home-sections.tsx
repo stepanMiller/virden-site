@@ -25,10 +25,29 @@ export function HomeDirections() {
       </div>
       <div className="directionCards">
         {homeContent.directions.map((direction, index) => (
-          <article key={direction.title}>
-            <span>{String(index + 1).padStart(2, "0")}</span>
-            <h3>{direction.title}</h3>
-            <p>{direction.note}</p>
+          <article className="directionCard" key={direction.title}>
+            <div className="directionCard__media">
+              <Image
+                src={assetPath(direction.image)}
+                alt={direction.imageAlt}
+                fill
+                quality={92}
+                sizes="(max-width: 720px) 100vw, (max-width: 1100px) 50vw, 33vw"
+                style={{ objectPosition: direction.position }}
+              />
+            </div>
+            <div className="directionCard__body">
+              <span>{String(index + 1).padStart(2, "0")}</span>
+              <h3>{direction.title}</h3>
+              <p>{direction.note}</p>
+              {"href" in direction ? (
+                <Link className="directionCard__link" href={direction.href} aria-label={`Открыть: ${direction.title}`}>
+                  Смотреть продукт <span aria-hidden="true">↗</span>
+                </Link>
+              ) : (
+                <span className="directionCard__arrow" aria-hidden="true">↗</span>
+              )}
+            </div>
           </article>
         ))}
       </div>
@@ -42,7 +61,7 @@ export function HomeStatement() {
       <div className="shell homeStatement__inner">
         <p className="eyebrow eyebrow--light">Подход VIRDEN</p>
         <h2 id="statement-title">Не подбираем похожее. Производим нужное.</h2>
-        <p>Конструкция, материал, цвет, размер и брендирование собираются вокруг задачи конкретного объекта.</p>
+        <p>Размер, материал, цвет, конструкция, плотность, брендинг и комплектация определяются задачей конкретного объекта.</p>
       </div>
     </section>
   );
@@ -63,14 +82,9 @@ export function HomeCustomization() {
       <div className="homeCustomization__copy">
         <p className="eyebrow">Индивидуальное производство</p>
         <h2 id="customization-title">Детали, которые работают на бренд объекта</h2>
-        <p>
-          Вместо компромисса с готовым каталогом — согласованное решение: от фактуры и размера до фирменной отделки и упаковки.
-        </p>
+        <p>Согласуем параметры изделия и его применения: от материала и конструкции до вышивки, комплектации и упаковки.</p>
         <ul>
-          <li>Материалы и отделка</li>
-          <li>Цвет и размерная сетка</li>
-          <li>Логотип и брендирование</li>
-          <li>Комплектация и упаковка</li>
+          {homeContent.customization.map((item) => <li key={item}>{item}</li>)}
         </ul>
       </div>
     </section>
@@ -83,7 +97,6 @@ export function HomeSelectedProduct() {
       <div className="selectedProduct__copy">
         <p className="eyebrow">Выбранный продукт</p>
         <h2 id="selected-product-title">Вафельный халат для отелей и SPA</h2>
-        <p>Production-карточка показывает систему продукта: фотографии, характеристики, детали и персонализацию.</p>
         <ActionLink href="/products/bathrobe">Открыть карточку</ActionLink>
       </div>
       <Link className="selectedProduct__media" href="/products/bathrobe" aria-label="Открыть карточку вафельного халата">
@@ -99,26 +112,25 @@ export function HomeSelectedProduct() {
   );
 }
 
+export function HomeOem() {
+  return (
+    <section className="homeOem shell" aria-labelledby="oem-title">
+      <div className="homeOem__copy">
+        <p className="eyebrow">Нестандартное оборудование / OEM</p>
+        <h2 id="oem-title">Не только то, что уже есть в каталоге</h2>
+        <p>По запросу объекта подбираем производство для нестандартных изделий, фирменного оборудования и продукции под собственной маркой.</p>
+        <p>Отправной точкой может быть описание задачи, эскиз или образец.</p>
+      </div>
+      <div className="homeOem__media">
+        <Image src={assetPath("/assets/categories/bakery-display.jpg")} alt="Предметное решение для шведской линии, иллюстрирующее категорию оборудования" fill quality={92} sizes="(max-width: 800px) 100vw, 48vw" />
+      </div>
+    </section>
+  );
+}
+
 export function HomeOperations() {
   return (
     <>
-      <section className="operations shell" aria-labelledby="operations-title">
-        <div className="sectionIntro sectionIntro--wide">
-          <p className="eyebrow">Управляемый процесс</p>
-          <h2 id="operations-title">За красивым объектом — управляемая цепочка поставок.</h2>
-          <p>Визуальное решение связано с образцами, спецификацией, производством, контролем и комплектацией.</p>
-        </div>
-        <div className="capabilityGrid">
-          {homeContent.capabilities.map((capability, index) => (
-            <article key={capability.title}>
-              <span>{String(index + 1).padStart(2, "0")}</span>
-              <h3>{capability.title}</h3>
-              <p>{capability.text}</p>
-            </article>
-          ))}
-        </div>
-      </section>
-
       <section className="reliability" aria-labelledby="reliability-title">
         <div className="shell reliability__grid">
           <div>
@@ -137,11 +149,28 @@ export function HomeOperations() {
           <p className="eyebrow">Процесс</p>
           <h2 id="process-title">От задачи до готовой комплектации</h2>
         </div>
+        <div className="homeProcess__lead">
+          <h3>За красивым объектом — управляемая цепочка поставок</h3>
+          <p>Пять этапов связывают задачу объекта, согласованный образец, производство и поставку.</p>
+        </div>
         <ol>
           {homeContent.process.map((step, index) => (
-            <li key={step}>
-              <span>{String(index + 1).padStart(2, "0")}</span>
-              <p>{step}</p>
+            <li className="homeProcess__step" key={step.title}>
+              <span className="homeProcess__number">{String(index + 1).padStart(2, "0")}</span>
+              <div className="homeProcess__title"><h4>{step.title}</h4></div>
+              <div className="homeProcess__body">
+                {step.paragraphs.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
+                {"scenarios" in step ? (
+                  <div className="homeProcess__scenarios">
+                    {step.scenarios.map((scenario) => (
+                      <div key={scenario.title}>
+                        <strong>{scenario.title}</strong>
+                        <p>{scenario.text}</p>
+                      </div>
+                    ))}
+                  </div>
+                ) : null}
+              </div>
             </li>
           ))}
         </ol>

@@ -27,7 +27,7 @@ export function SiteFooter() {
       </div>
       <div className="shell siteFooter__bottom">
         <span>© VIRDEN</span>
-        <span>Контактные данные — после подтверждения</span>
+        <span>Комплексное оснащение hospitality-объектов</span>
       </div>
     </footer>
   );

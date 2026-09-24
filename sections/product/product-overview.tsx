@@ -8,7 +8,6 @@ export function ProductOverview({ product }: { product: Product }) {
       <h1>{product.name}</h1>
       <p className="productOverview__lead">{product.lead}</p>
       <p className="productOverview__description">{product.description}</p>
-      <p className="contentNotice">{product.contentStatus}</p>
 
       <ul className="benefitGrid" aria-label="Преимущества продукта">
         {product.benefits.map((benefit, index) => (

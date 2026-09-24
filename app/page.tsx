@@ -5,6 +5,7 @@ import {
   HomeCustomization,
   HomeDirections,
   HomeFinalCta,
+  HomeOem,
   HomeOperations,
   HomeSelectedProduct,
   HomeStatement,
@@ -20,6 +21,7 @@ export default function HomePage() {
         <HomeStatement />
         <HomeCustomization />
         <HomeSelectedProduct />
+        <HomeOem />
         <HomeOperations />
         <HomeFinalCta />
       </main>
