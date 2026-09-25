@@ -48,9 +48,6 @@ export function HomeDirections() {
                 <svg className="directionCard__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M5 19 19 5M9 5h10v10" /></svg>
               )}
             </div>
-            {direction.title === "Мебель" ? (
-              <Link className="directionCard__hitarea" href="/categories/furniture" aria-label="Открыть раздел «Мебель»" />
-            ) : null}
           </article>
         ))}
       </div>
