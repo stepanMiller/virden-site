@@ -1,6 +1,7 @@
 import { SiteFooter } from "@/components/layout/site-footer";
 import { SiteHeader } from "@/components/layout/site-header";
 import { HomeHero } from "@/sections/home/home-hero";
+import { HomeProjects } from "@/sections/home/home-projects";
 import {
   HomeCustomization,
   HomeDirections,
@@ -23,6 +24,7 @@ export default function HomePage() {
         <HomeSelectedProduct />
         <HomeOem />
         <HomeOperations />
+        <HomeProjects />
         <HomeFinalCta />
       </main>
       <SiteFooter />
