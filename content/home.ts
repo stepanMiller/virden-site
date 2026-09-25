@@ -19,6 +19,7 @@ export const homeContent = {
       image: "/assets/hero/virden-hero-poster.jpg",
       imageAlt: "Гостеприимный интерьер с мягким креслом и предметами сервировки",
       position: "68% 72%",
+      href: "/categories/furniture",
     },
     {
       title: "Текстиль",
