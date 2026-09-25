@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { primaryNavigation } from "@/content/navigation";
 import { BrandLogo } from "./brand-logo";
+import { MobileMenu } from "./mobile-menu";
 
 export function SiteHeader() {
   return (
@@ -19,16 +20,7 @@ export function SiteHeader() {
         <Link className="headerCta" href="/#project-request">
           <span>Запросить КП</span><span className="headerCta__arrow" aria-hidden="true">→</span>
         </Link>
-        <details className="mobileMenu">
-          <summary aria-label="Открыть меню"><span>Меню</span><span className="mobileMenu__icon" aria-hidden="true"><i /><i /><i /></span></summary>
-          <nav aria-label="Мобильная навигация">
-            {primaryNavigation.map((item) => (
-              <Link href={item.href} key={item.href}>
-                {item.label}
-              </Link>
-            ))}
-          </nav>
-        </details>
+        <MobileMenu />
       </div>
     </header>
   );
