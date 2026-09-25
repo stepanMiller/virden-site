@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import type { CSSProperties } from "react";
 import { ActionLink } from "@/components/ui/action-link";
 import { homeContent } from "@/content/home";
 import { assetPath } from "@/lib/site-path";
@@ -181,7 +182,11 @@ export function HomeOperations() {
 
 export function HomeFinalCta() {
   return (
-    <section className="homeFinalCta materialBurgundy" aria-labelledby="final-cta-title">
+    <section
+      className="homeFinalCta materialBurgundy"
+      aria-labelledby="final-cta-title"
+      style={{ "--velvet-image": `url("${assetPath("/assets/backgrounds/virden-velvet-cta.webp")}")` } as CSSProperties}
+    >
       <div className="shell homeFinalCta__inner">
         <div>
           <p className="eyebrow eyebrow--light">VIRDEN</p>
