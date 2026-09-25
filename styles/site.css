@@ -1714,6 +1714,7 @@ button {
 }
 
 .directionCard {
+  position: relative;
   min-width: 0;
   overflow: hidden;
   border: 1px solid var(--color-line);
@@ -1769,6 +1770,29 @@ button {
   font-size: 0.75rem;
   font-weight: 700;
   letter-spacing: 0.04em;
+}
+
+.directionCard__arrow,
+.directionCard__linkArrow {
+  width: 1.15rem;
+  height: 1.15rem;
+}
+
+.directionCard__linkArrow {
+  display: inline-block;
+  margin-left: 0.6rem;
+  vertical-align: middle;
+}
+
+.directionCard__hitarea {
+  position: absolute;
+  z-index: 3;
+  inset: 0;
+}
+
+.directionCard__hitarea:focus-visible {
+  outline: 0.15rem solid var(--color-royal-burgundy);
+  outline-offset: -0.2rem;
 }
 
 .directionCard__link {

@@ -42,12 +42,15 @@ export function HomeDirections() {
               <p>{direction.note}</p>
               {"href" in direction ? (
                 <Link className="directionCard__link" href={direction.href} aria-label={`Открыть: ${direction.title}`}>
-                  Смотреть продукт <span aria-hidden="true">↗</span>
+                  Смотреть продукт <svg className="directionCard__linkArrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M5 19 19 5M9 5h10v10" /></svg>
                 </Link>
               ) : (
-                <span className="directionCard__arrow" aria-hidden="true">↗</span>
+                <svg className="directionCard__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M5 19 19 5M9 5h10v10" /></svg>
               )}
             </div>
+            {direction.title === "Мебель" ? (
+              <Link className="directionCard__hitarea" href="/categories/furniture" aria-label="Открыть раздел «Мебель»" />
+            ) : null}
           </article>
         ))}
       </div>
