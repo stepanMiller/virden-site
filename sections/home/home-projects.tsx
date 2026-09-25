@@ -1,4 +1,6 @@
+import Image from "next/image";
 import { projectCases } from "@/content/projects";
+import { assetPath } from "@/lib/site-path";
 import styles from "./home-projects.module.css";
 
 export function HomeProjects() {
@@ -13,6 +15,14 @@ export function HomeProjects() {
       <div className={styles.grid}>
         {projectCases.map((project, index) => (
           <article className={styles.card} key={project.id}>
+            <div className={styles.media}>
+              <Image
+                src={assetPath(project.image)}
+                alt={project.imageAlt}
+                fill
+                sizes="(max-width: 640px) 100vw, 50vw"
+              />
+            </div>
             <div className={styles.meta}>
               <span aria-hidden="true">{String(index + 1).padStart(2, "0")}</span>
               <p>{project.objectType}</p>
@@ -24,6 +34,7 @@ export function HomeProjects() {
           </article>
         ))}
       </div>
+      <p className={styles.imageNote}>Изображения иллюстрируют направления проектов и не являются фотографиями поставленных изделий.</p>
     </section>
   );
 }

@@ -35,12 +35,22 @@
 
 .card {
   display: flex;
-  min-height: clamp(15rem, 21vw, 20rem);
   flex-direction: column;
-  justify-content: space-between;
-  gap: 2rem;
+  gap: clamp(1.25rem, 2vw, 2rem);
   padding: clamp(1.5rem, 3vw, 3rem);
   background: var(--color-canvas);
+}
+
+.media {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  background: var(--color-surface);
+}
+
+.media img {
+  object-fit: contain;
 }
 
 .meta {
@@ -77,11 +87,22 @@
   text-wrap: balance;
 }
 
+.body {
+  margin-top: auto;
+}
+
 .body p {
   max-width: 44ch;
   margin: 0;
   color: var(--color-muted);
   line-height: 1.55;
+}
+
+.imageNote {
+  margin: 1rem 0 0;
+  color: var(--color-muted);
+  font-size: 0.75rem;
+  line-height: 1.5;
 }
 
 @media (max-width: 900px) {
@@ -104,7 +125,4 @@
     grid-column: auto;
   }
 
-  .card {
-    min-height: 14rem;
-  }
 }
