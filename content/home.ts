@@ -24,9 +24,10 @@ export const homeContent = {
     {
       title: "Текстиль",
       note: "Полотенца, постельное бельё, саше и паштемали",
-      image: "/assets/products/bathrobe/bathrobe-folded.webp",
-      imageAlt: "Сложенный вафельный текстиль VIRDEN",
-      position: "center 48%",
+      image: "/assets/categories/textiles/textile-bedding.webp",
+      imageAlt: "Постельное бельё с отделкой в гостиничном номере",
+      position: "center",
+      href: "/categories/textiles",
     },
     {
       title: "Халаты",
