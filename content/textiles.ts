@@ -59,8 +59,8 @@ export const textilesContent = {
     {
       title: "Саше",
       description: "Декоративные саше-дорожки для изножья, укороченные и полноразмерные покрывала для гостиничной кровати.",
-      image: null,
-      alt: "",
+      image: textileAsset("textile-sachet.webp"),
+      alt: "Саше и декоративный текстиль для гостиничной кровати",
     },
     {
       title: "Паштемаль",
