@@ -73,16 +73,21 @@ export default function TextilesPage() {
           </div>
           <div className="detailGrid">
             {textiles.directions.map((direction) => (
-              <article className="detailCard" key={direction.title}>
-                <div className="detailCard__image">
-                  <Image
-                    src={direction.image}
-                    alt={direction.alt}
-                    fill
-                    quality={92}
-                    sizes="(max-width: 720px) 50vw, (max-width: 1180px) 33vw, 20vw"
-                  />
-                </div>
+              <article
+                className={direction.image ? "detailCard" : `detailCard ${styles.noImageCard}`}
+                key={direction.title}
+              >
+                {direction.image ? (
+                  <div className="detailCard__image">
+                    <Image
+                      src={direction.image}
+                      alt={direction.alt}
+                      fill
+                      quality={92}
+                      sizes="(max-width: 720px) 50vw, (max-width: 1180px) 33vw, 25vw"
+                    />
+                  </div>
+                ) : null}
                 <h3>{direction.title}</h3>
                 <p>{direction.description}</p>
               </article>

@@ -20,19 +20,9 @@ export const textilesContent = {
       label: "Полотенца",
     },
     {
-      src: textileAsset("textile-sachet.webp"),
-      alt: "Текстильное саше из фактурной ткани с завязками",
-      label: "Саше",
-    },
-    {
       src: textileAsset("textile-peshtemal.webp"),
       alt: "Полосатая паштемаль в интерьере SPA-зоны",
       label: "Паштемаль",
-    },
-    {
-      src: textileAsset("textile-detail.webp"),
-      alt: "Крупный план плетения и края ткани",
-      label: "Ткани и детали",
     },
   ],
   strengths: [
@@ -56,33 +46,27 @@ export const textilesContent = {
   directions: [
     {
       title: "Постельное бельё",
-      description: "Состав, характеристики нити, плотность, количество нитей, плетение и обработка под требования объекта.",
+      description: "Простыни, пододеяльники, наволочки, наперники и детское бельё для номерного фонда.",
       image: textileAsset("textile-bedding.webp"),
       alt: "Постельное бельё с отделкой в гостиничном номере",
     },
     {
       title: "Полотенца",
-      description: "Разная плотность, мягкость, впитываемость и ресурс для гостиничной, SPA и wellness-эксплуатации.",
+      description: "Полотенца для номерного фонда, SPA и wellness-зон, а также для бассейнов.",
       image: textileAsset("textile-towels.webp"),
       alt: "Стопка белых полотенец в ванной комнате",
     },
     {
       title: "Саше",
-      description: "Размеры, материал, цвет и отделка под номерной фонд и стилистику объекта.",
-      image: textileAsset("textile-sachet.webp"),
-      alt: "Текстильное саше из фактурной ткани с завязками",
+      description: "Декоративные саше-дорожки для изножья, укороченные и полноразмерные покрывала для гостиничной кровати.",
+      image: null,
+      alt: "",
     },
     {
       title: "Паштемаль",
       description: "Лёгкие текстильные решения для SPA, wellness и гостевых зон.",
       image: textileAsset("textile-peshtemal.webp"),
       alt: "Полосатая паштемаль в интерьере SPA-зоны",
-    },
-    {
-      title: "Ткани и детали",
-      description: "Материал, плетение, цвет, кант, вышивка и другие параметры согласуются под задачу проекта.",
-      image: textileAsset("textile-detail.webp"),
-      alt: "Крупный план плетения и края ткани",
     },
   ],
 } as const;
