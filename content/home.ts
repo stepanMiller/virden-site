@@ -40,9 +40,10 @@ export const homeContent = {
     {
       title: "Посуда / ресторан",
       note: "Для номера, room service, бара и профессиональной сервировки",
-      image: "/assets/categories/ceramic-bowl.jpg",
-      imageAlt: "Керамическая чаша для ресторанной сервировки",
+      image: "/assets/categories/tableware/tableware-restaurant.webp",
+      imageAlt: "Керамическая чаша на сервированном ресторанном столе",
       position: "center",
+      href: "/categories/tableware",
     },
     {
       title: "Оснащение номера / amenities",
