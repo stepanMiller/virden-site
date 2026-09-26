@@ -185,7 +185,7 @@ export function HomeFinalCta() {
     <section
       className="homeFinalCta materialBurgundy"
       aria-labelledby="final-cta-title"
-      style={{ "--velvet-image": `url("${assetPath("/assets/backgrounds/virden-velvet-cta.webp")}")` } as CSSProperties}
+      style={{ "--velvet-image": `url("${assetPath("/assets/backgrounds/virden-velvet-cta.jpg")}")` } as CSSProperties}
     >
       <div className="shell homeFinalCta__inner">
         <div>
