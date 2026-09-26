@@ -11,7 +11,7 @@ Responsive B2B hospitality website. Routes:
 - `/categories/oem/`;
 - reusable product template at `/products/bathrobe/`.
 
-The three new category pages are on `codex/amenities-merch-oem-review`, pending visual/content approval. Pushing this review branch does not deploy it. Do not merge into the deploy branch or dispatch the Pages workflow before approval.
+The three new category pages were prepared on `codex/amenities-merch-oem-review`. On 26 September 2026 the user authorised a GitHub Pages preview through `codex/first-production-pass` for visual review. This is not approval of final content or of a custom-domain release. The public contact destination for commercial CTAs remains to be confirmed.
 
 ## Stack
 

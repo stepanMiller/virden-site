@@ -1,5 +1,7 @@
 # VIRDEN — category review pass
 
+Publication update (26 September 2026): the user subsequently authorised publication to the existing GitHub Pages preview branch to inspect the pages and retain the option to revert. The remaining contact and visual decisions below still require review. This update does not cover a custom-domain release.
+
 ## Review boundary
 
 - Working branch: `codex/amenities-merch-oem-review`.
@@ -46,10 +48,10 @@ The environment's pnpm wrapper was invoked with `--config.manage-package-manager
 
 Scope limits: desktop Chrome and responsive/touch emulation, not physical iPhone Safari. This is a targeted technical/visual/basic SEO audit, not a full WCAG certification, penetration test, field Core Web Vitals measurement or search-indexing guarantee.
 
-## Decisions required before deployment
+## Decisions required before final sign-off
 
 1. Confirm a public email, telephone or messenger destination for commercial requests. Existing CTA links currently scroll to the footer, which has no confirmed contact channel. No fake address, submission or form backend was introduced.
 2. Approve the three new pages and the four new merch illustrations. Illustrations must not be described as delivered-product photography.
-3. Explicitly approve integration into `codex/first-production-pass` and GitHub Pages publication. Until then, only the separate review branch should be shared/changed.
+3. Confirm the final visual/content result after inspecting the GitHub Pages preview. The approved fallback point before this pass is `fa8b055ace05836dd0b68e8e4f9ccbfd25fe1fcf`; any rollback should be a new revert commit without rewriting branch history.
 
 Future hosting note: GitHub project Pages cannot establish an authoritative host-root robots policy through `/virden-site/robots.txt`. Sitemap and canonical URLs are configured; root/domain changes remain outside this pass.
