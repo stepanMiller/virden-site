@@ -23,7 +23,7 @@ export async function generateMetadata({ params }: ProductPageProps): Promise<Me
 
   return pageMetadata({
     title: product.name,
-    description: `${product.category}. Фотографии, детали, характеристики и возможности персонализации VIRDEN.`,
+    description: product.seoDescription,
     path: `/products/${product.slug}/`,
     image: `/assets/products/${product.slug}/${product.slug}-front.webp`,
   });

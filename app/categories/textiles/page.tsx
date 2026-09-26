@@ -9,7 +9,7 @@ import { ProductGallery } from "@/sections/product/product-gallery";
 import styles from "./page.module.css";
 
 export const metadata = pageMetadata({
-  title: "Текстиль",
+  title: "Текстиль для отелей и SPA",
   description:
     "Текстиль для отелей и SPA: постельное бельё, полотенца, саше, паштемаль и подбор характеристик ткани под требования объекта.",
   path: "/categories/textiles/",

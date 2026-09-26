@@ -9,7 +9,7 @@ import { ProductGallery } from "@/sections/product/product-gallery";
 import styles from "./page.module.css";
 
 export const metadata = pageMetadata({
-  title: "Посуда / ресторан",
+  title: "Профессиональная посуда для отелей и ресторанов",
   description:
     "Профессиональная посуда для отелей и ресторанов: номер, room service, бар, шведская линия и рестораны à la carte.",
   path: "/categories/tableware/",

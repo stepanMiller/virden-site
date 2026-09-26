@@ -9,7 +9,7 @@ import { ProductGallery } from "@/sections/product/product-gallery";
 import styles from "./page.module.css";
 
 export const metadata = pageMetadata({
-  title: "Мебель",
+  title: "Мебель для отелей и ресторанов",
   description:
     "Мебель для ресторанов, отелей и общественных пространств. Столы, стулья, шведская линия, лобби и конференц-залы — решения под задачу объекта.",
   path: "/categories/furniture/",
