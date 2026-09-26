@@ -18,7 +18,7 @@
 
 .page :global(.productGallery__main),
 .page :global(.detailCard__image) {
-  aspect-ratio: 1200 / 950;
+  aspect-ratio: 4 / 3;
 }
 
 .page :global(.productClosing .actionLink--secondary) {
