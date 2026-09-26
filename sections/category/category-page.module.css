@@ -1,0 +1,40 @@
+.positioning {
+  max-width: 29rem;
+  margin: 1rem 0 0.85rem;
+  color: var(--color-royal-burgundy);
+  font-family: var(--font-display);
+  font-size: clamp(1.55rem, 2.1vw, 2.1rem);
+  line-height: 1.12;
+}
+.specificationNote {
+  margin: 2rem 0 0;
+  border-top: 1px solid var(--color-line);
+  padding-top: 1rem;
+  color: var(--color-muted);
+  font-size: 0.8rem;
+  line-height: 1.5;
+}
+.page :global(.productGallery__main), .page :global(.detailCard__image) { aspect-ratio: 4 / 3; }
+.page :global(.detailCard__image img) { object-fit: contain; }
+.page :global(.benefitGrid li) { min-width: 0; }
+.page :global(.benefitGrid strong) { overflow-wrap: anywhere; }
+.page :global(.productClosing .actionLink--secondary) { border-color: var(--color-cream); color: var(--color-cream); }
+.directions[data-count="4"] { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.directions[data-count="2"] { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.imageNote { margin-top: 1.5rem; color: var(--color-muted); font-size: 0.75rem; line-height: 1.5; }
+@media (max-width: 900px) {
+  .directions, .directions[data-count="4"] { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .directions[data-count="5"] > :last-child { grid-column: 1 / -1; max-width: 100%; }
+  .directions[data-count="5"] > :last-child :global(.detailCard__image) { max-height: 22rem; }
+}
+@media (max-width: 540px) {
+  .positioning { font-size: clamp(1.1rem, 4.6vw, 1.45rem); }
+  .page :global(.productOverview__description) { font-size: 0.8125rem; }
+  .page :global(.benefitGrid small) { font-size: 0.6875rem; }
+  .page :global(.benefitGrid strong) { font-size: 0.8125rem; }
+  .page :global(.productOverview h1) { font-size: clamp(1.45rem, 5.8vw, 1.8rem); overflow-wrap: anywhere; }
+  .directions { gap: 1rem; }
+  .directions[data-count="2"] { grid-template-columns: 1fr; }
+  .page :global(.detailCard h3) { font-size: 1.15rem; }
+  .page :global(.detailCard p) { font-size: 0.8125rem; }
+}

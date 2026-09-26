@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/metadata";
 import Image from "next/image";
 import Link from "next/link";
 import { SiteFooter } from "@/components/layout/site-footer";
@@ -8,11 +8,13 @@ import { furnitureContent } from "@/content/furniture";
 import { ProductGallery } from "@/sections/product/product-gallery";
 import styles from "./page.module.css";
 
-export const metadata: Metadata = {
+export const metadata = pageMetadata({
   title: "Мебель",
   description:
     "Мебель для ресторанов, отелей и общественных пространств. Столы, стулья, шведская линия, лобби и конференц-залы — решения под задачу объекта.",
-};
+  path: "/categories/furniture/",
+  image: "/assets/categories/furniture/furniture-restaurant-main.jpg",
+});
 
 export default function FurniturePage() {
   const furniture = furnitureContent;
@@ -20,7 +22,7 @@ export default function FurniturePage() {
   return (
     <>
       <SiteHeader />
-      <main className={`productPage ${styles.page}`}>
+      <main className={`productPage ${styles.page}`} id="main-content" tabIndex={-1}>
         <nav className="breadcrumbs shell" aria-label="Хлебные крошки">
           <Link href="/">Главная</Link>
           <span aria-hidden="true">/</span>

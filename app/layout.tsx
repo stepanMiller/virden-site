@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import { siteUrl } from "@/lib/metadata";
 
 export const metadata: Metadata = {
+  metadataBase: new URL(siteUrl()),
   title: {
     default: "VIRDEN — комплексное оснащение hospitality-объектов",
     template: "%s | VIRDEN",

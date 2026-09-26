@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { primaryNavigation } from "@/content/navigation";
+import { categoryNavigation, primaryNavigation } from "@/content/navigation";
 import { BrandLogo } from "./brand-logo";
 
 export function SiteFooter() {
@@ -23,6 +23,8 @@ export function SiteFooter() {
               {item.label}
             </Link>
           ))}
+          <span className="siteFooter__navLabel">Категории</span>
+          {categoryNavigation.map(item => <Link href={item.href} key={item.href}>{item.label}</Link>)}
         </nav>
       </div>
       <div className="shell siteFooter__bottom">

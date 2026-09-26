@@ -5,7 +5,7 @@ export function ProductOverview({ product }: { product: Product }) {
   return (
     <div className="productOverview">
       <p className="eyebrow">{product.category}</p>
-      <h1>{product.name}</h1>
+      <h1 id="product-title">{product.name}</h1>
       <p className="productOverview__lead">{product.lead}</p>
       <p className="productOverview__description">{product.description}</p>
 
@@ -22,7 +22,7 @@ export function ProductOverview({ product }: { product: Product }) {
       <div className="specTable" role="table" aria-label="Характеристики продукта">
         {product.specs.map((spec) => (
           <div className="specTable__row" role="row" key={spec.label}>
-            <span role="cell">{spec.label}</span>
+            <span role="rowheader">{spec.label}</span>
             <strong role="cell">{spec.value}</strong>
           </div>
         ))}

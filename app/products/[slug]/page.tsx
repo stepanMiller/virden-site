@@ -9,6 +9,7 @@ import { ProductDetails } from "@/sections/product/product-details";
 import { ProductGallery } from "@/sections/product/product-gallery";
 import { ProductActions, ProductOverview } from "@/sections/product/product-overview";
 import { QualitySection } from "@/sections/product/quality-section";
+import { pageMetadata } from "@/lib/metadata";
 
 type ProductPageProps = {
   params: Promise<{ slug: string }>;
@@ -20,10 +21,12 @@ export async function generateMetadata({ params }: ProductPageProps): Promise<Me
 
   if (!product) return {};
 
-  return {
+  return pageMetadata({
     title: product.name,
     description: `${product.category}. Фотографии, детали, характеристики и возможности персонализации VIRDEN.`,
-  };
+    path: `/products/${product.slug}/`,
+    image: `/assets/products/${product.slug}/${product.slug}-front.webp`,
+  });
 }
 
 export function generateStaticParams() {
@@ -39,21 +42,21 @@ export default async function ProductPage({ params }: ProductPageProps) {
   return (
     <>
       <SiteHeader />
-      <main className="productPage">
-        <div className="breadcrumbs shell" aria-label="Хлебные крошки">
+      <main className="productPage" id="main-content" tabIndex={-1}>
+        <nav className="breadcrumbs shell" aria-label="Хлебные крошки">
           <Link href="/">Главная</Link>
           <span aria-hidden="true">/</span>
-          <span>Продукция</span>
+          <Link href="/categories/textiles">Текстиль</Link>
           <span aria-hidden="true">/</span>
-          <span>{product.name}</span>
-        </div>
+          <span aria-current="page">{product.name}</span>
+        </nav>
         <section className="productHero shell" aria-labelledby="product-title">
           <ProductGallery
             gallery={product.gallery}
             mainImage={product.mainImage}
             mainImageAlt={product.mainImageAlt}
           />
-          <div className="productHero__info" id="product-title">
+          <div className="productHero__info">
             <ProductOverview product={product} />
           </div>
           <ProductActions />

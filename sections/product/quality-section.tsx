@@ -4,7 +4,7 @@ export function QualitySection({ product }: { product: Product }) {
   return (
     <section className="qualitySection shell" aria-labelledby="quality-title">
       <div>
-        <p className="eyebrow">Quality / trust</p>
+        <p className="eyebrow">Контроль качества</p>
         <h2 id="quality-title">Качество, встроенное в процесс</h2>
         <p className="qualitySection__lead">
           За красивым объектом — управляемая цепочка поставок. Образец и спецификация становятся контрольной точкой для производства и комплектации.

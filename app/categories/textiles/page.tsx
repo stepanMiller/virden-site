@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/metadata";
 import Image from "next/image";
 import Link from "next/link";
 import { SiteFooter } from "@/components/layout/site-footer";
@@ -8,18 +8,13 @@ import { textilesContent } from "@/content/textiles";
 import { ProductGallery } from "@/sections/product/product-gallery";
 import styles from "./page.module.css";
 
-export const metadata: Metadata = {
+export const metadata = pageMetadata({
   title: "Текстиль",
   description:
     "Текстиль для отелей и SPA: постельное бельё, полотенца, саше, паштемаль и подбор характеристик ткани под требования объекта.",
-  openGraph: {
-    title: "Текстиль | VIRDEN",
-    description:
-      "Постельное бельё, полотенца, саше и паштемаль: решения по техническим параметрам и требованиям объекта.",
-    type: "website",
-    locale: "ru_RU",
-  },
-};
+  path: "/categories/textiles/",
+  image: "/assets/categories/textiles/textile-bedding.webp",
+});
 
 export default function TextilesPage() {
   const textiles = textilesContent;
@@ -27,7 +22,7 @@ export default function TextilesPage() {
   return (
     <>
       <SiteHeader />
-      <main className={`productPage ${styles.page}`}>
+      <main className={`productPage ${styles.page}`} id="main-content" tabIndex={-1}>
         <nav className="breadcrumbs shell" aria-label="Хлебные крошки">
           <Link href="/">Главная</Link>
           <span aria-hidden="true">/</span>

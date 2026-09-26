@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/metadata";
 import Image from "next/image";
 import Link from "next/link";
 import { SiteFooter } from "@/components/layout/site-footer";
@@ -8,11 +8,13 @@ import { tablewareContent } from "@/content/tableware";
 import { ProductGallery } from "@/sections/product/product-gallery";
 import styles from "./page.module.css";
 
-export const metadata: Metadata = {
+export const metadata = pageMetadata({
   title: "Посуда / ресторан",
   description:
     "Профессиональная посуда для отелей и ресторанов: номер, room service, бар, шведская линия и рестораны à la carte.",
-};
+  path: "/categories/tableware/",
+  image: "/assets/categories/tableware/tableware-restaurant.webp",
+});
 
 export default function TablewarePage() {
   const tableware = tablewareContent;
@@ -20,7 +22,7 @@ export default function TablewarePage() {
   return (
     <>
       <SiteHeader />
-      <main className={`productPage ${styles.page}`}>
+      <main className={`productPage ${styles.page}`} id="main-content" tabIndex={-1}>
         <nav className="breadcrumbs shell" aria-label="Хлебные крошки">
           <Link href="/">Главная</Link>
           <span aria-hidden="true">/</span>

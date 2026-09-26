@@ -36,6 +36,7 @@ export function HomeDirections() {
                 sizes="(max-width: 720px) 100vw, (max-width: 1100px) 50vw, 33vw"
                 style={{ objectPosition: direction.position }}
               />
+              {"illustrative" in direction && direction.illustrative ? <span className="directionCard__imageNote">Иллюстрация направления</span> : null}
             </div>
             <div className="directionCard__body">
               <span>{String(index + 1).padStart(2, "0")}</span>
@@ -121,9 +122,11 @@ export function HomeOem() {
         <h2 id="oem-title">Не только то, что уже есть в каталоге</h2>
         <p>По запросу объекта подбираем производство для нестандартных изделий, фирменного оборудования и продукции под собственной маркой.</p>
         <p>Отправной точкой может быть описание задачи, эскиз или образец.</p>
+        <ActionLink href="/categories/oem">Открыть направление</ActionLink>
       </div>
       <div className="homeOem__media">
-        <Image src={assetPath("/assets/categories/bakery-display.jpg")} alt="Предметное решение для шведской линии, иллюстрирующее категорию оборудования" fill quality={92} sizes="(max-width: 800px) 100vw, 48vw" />
+        <Image src={assetPath("/assets/categories/oem/oem-photo-booth.webp")} alt="Иллюстрация фотобудки как примера нестандартного оборудования" fill quality={92} sizes="(max-width: 800px) 100vw, 48vw" />
+        <span className="directionCard__imageNote">Иллюстрация направления</span>
       </div>
     </section>
   );
