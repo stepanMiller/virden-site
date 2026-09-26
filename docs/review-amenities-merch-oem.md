@@ -23,6 +23,7 @@ Homepage cards now open the three new routes and show relevant, clearly labelled
 ## Audit fixes
 
 - Separate canonical URLs, descriptions, Open Graph and Twitter metadata across eight pages; configurable site origin, sitemap and robots export.
+- `noindex,nofollow` on the GitHub Pages review host, to keep the preview out of search results; a confirmed custom-domain build can be indexable.
 - Skip-to-content targets; corrected product heading reference and specification row headers; semantic bathrobe breadcrumbs linked to Textiles.
 - Menu Escape/outside-click handling and scrollable mobile navigation.
 - Lightbox keyboard focus containment/restoration, Escape and arrow navigation, tap zoom, swipe direction checking and prevention of swipe-triggered accidental opening.

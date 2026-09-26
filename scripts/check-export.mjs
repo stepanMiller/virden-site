@@ -30,7 +30,11 @@ for (const file of pages) {
   if (!html.includes('id="main-content"')) errors.push(`${route}: missing skip-link target`);
   const tags = [...html.matchAll(/<(?:a|img|script|link|source|video|meta)\b[^>]*>/g)].map(match => match[0]);
   const canonical = tags.filter(tag => tag.startsWith("<link") && attrs(tag).rel === "canonical");
-  if (canonical.length !== 1 || !attrs(canonical[0]).href?.startsWith("https://")) errors.push(`${route}: invalid canonical`);
+  const canonicalHref = canonical[0] ? attrs(canonical[0]).href : undefined;
+  if (canonical.length !== 1 || !canonicalHref?.startsWith("https://")) errors.push(`${route}: invalid canonical`);
+  if (canonicalHref?.includes(".github.io/") && !tags.some(tag => tag.startsWith("<meta") && attrs(tag).name === "robots" && attrs(tag).content?.includes("noindex"))) {
+    errors.push(`${route}: GitHub Pages preview must not be indexed`);
+  }
   if (!tags.some(tag => tag.startsWith("<meta") && attrs(tag).name === "description" && attrs(tag).content)) errors.push(`${route}: missing description`);
   for (const tag of tags) {
     const attributes = attrs(tag);

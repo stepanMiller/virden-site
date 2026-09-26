@@ -17,8 +17,8 @@ export const metadata: Metadata = {
     locale: "ru_RU",
   },
   robots: {
-    index: true,
-    follow: true,
+    index: !new URL(siteUrl()).hostname.endsWith(".github.io"),
+    follow: !new URL(siteUrl()).hostname.endsWith(".github.io"),
   },
 };
 
