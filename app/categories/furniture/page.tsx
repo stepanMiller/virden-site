@@ -83,29 +83,6 @@ export default function FurniturePage() {
           </div>
         </section>
 
-        <section className={styles.customization} aria-labelledby="furniture-customization-title">
-          <div className={styles.customizationImage}>
-            <Image
-              src={furniture.gallery[4].src}
-              alt={furniture.gallery[4].alt}
-              fill
-              quality={92}
-              sizes="(max-width: 800px) 100vw, 40vw"
-            />
-          </div>
-          <div className={styles.customizationCopy}>
-            <p className="eyebrow">Индивидуальное производство</p>
-            <h2 id="furniture-customization-title">Под задачу объекта</h2>
-            <p>
-              Размеры, материал, цвет, конструкция, отделка и комплектация мебели
-              согласуются под назначение пространства и спецификацию проекта.
-            </p>
-            <ul>
-              {furniture.customization.map((parameter) => <li key={parameter}>{parameter}</li>)}
-            </ul>
-          </div>
-        </section>
-
         <section className="productClosing materialBurgundy" aria-labelledby="furniture-closing-title">
           <div className="shell productClosing__inner">
             <div>
