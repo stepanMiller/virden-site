@@ -5,6 +5,7 @@ import { SiteFooter } from "@/components/layout/site-footer";
 import { SiteHeader } from "@/components/layout/site-header";
 import { ActionLink } from "@/components/ui/action-link";
 import { textilesContent } from "@/content/textiles";
+import { contactUrl } from "@/content/contact";
 import { ProductGallery } from "@/sections/product/product-gallery";
 import styles from "./page.module.css";
 
@@ -56,7 +57,7 @@ export default function TextilesPage() {
             </p>
           </div>
           <div className="productOverview__actions">
-            <ActionLink href="#project-request">Обсудить проект</ActionLink>
+            <ActionLink href={contactUrl}>Обсудить проект</ActionLink>
             <ActionLink href="#textiles-directions" variant="secondary">Смотреть направления</ActionLink>
           </div>
         </section>
@@ -97,7 +98,7 @@ export default function TextilesPage() {
               <h2 id="textiles-closing-title">Текстиль под требования вашего объекта</h2>
               <p>Обсудим задачу, параметры и состав комплектации.</p>
             </div>
-            <ActionLink href="#project-request" variant="secondary">Обсудить проект</ActionLink>
+            <ActionLink href={contactUrl} variant="secondary">Обсудить проект</ActionLink>
           </div>
         </section>
       </main>

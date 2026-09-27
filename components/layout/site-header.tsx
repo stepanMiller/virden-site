@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { primaryNavigation } from "@/content/navigation";
+import { contactUrl } from "@/content/contact";
 import { BrandLogo } from "./brand-logo";
 import { MobileMenu } from "./mobile-menu";
 import { CategoryMenu } from "./category-menu";
@@ -19,9 +20,9 @@ export function SiteHeader() {
             </Link>
           ))}
         </nav>
-        <Link className="headerCta" href="/#project-request">
+        <a className="headerCta" href={contactUrl} target="_blank" rel="noopener noreferrer" aria-label="Запросить КП в MAX">
           <span>Запросить КП</span><span className="headerCta__arrow" aria-hidden="true">→</span>
-        </Link>
+        </a>
         <MobileMenu />
       </div>
     </header>

@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { categoryNavigation, primaryNavigation } from "@/content/navigation";
+import { contactUrl } from "@/content/contact";
 import { BrandLogo } from "./brand-logo";
 
 export function SiteFooter() {
@@ -13,9 +14,9 @@ export function SiteFooter() {
         <div>
           <p className="eyebrow eyebrow--light">Комплексное оснащение</p>
           <p className="siteFooter__scope">Отели · рестораны · SPA · коммерческие объекты</p>
-          <Link className="siteFooter__cta" href="/#project-request">
-            Обсудить проект <span aria-hidden="true">→</span>
-          </Link>
+          <a className="siteFooter__cta" href={contactUrl} target="_blank" rel="noopener noreferrer">
+            Обсудить проект в MAX <span aria-hidden="true">→</span>
+          </a>
         </div>
         <nav className="siteFooter__nav" aria-label="Навигация в подвале">
           {primaryNavigation.map((item) => (

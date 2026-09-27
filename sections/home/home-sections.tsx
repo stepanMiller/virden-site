@@ -3,6 +3,7 @@ import Link from "next/link";
 import type { CSSProperties } from "react";
 import { ActionLink } from "@/components/ui/action-link";
 import { homeContent } from "@/content/home";
+import { contactUrl } from "@/content/contact";
 import { assetPath } from "@/lib/site-path";
 
 export function HomeDirections() {
@@ -13,7 +14,7 @@ export function HomeDirections() {
           <p className="eyebrow">Направления</p>
           <h2>Больше, чем поставки. Партнёрство, которое работает.</h2>
           <p>{homeContent.description}</p>
-          <Link href="#project-request">Обсудить проект <span aria-hidden="true">→</span></Link>
+          <a href={contactUrl} target="_blank" rel="noopener noreferrer">Обсудить проект <span aria-hidden="true">→</span></a>
         </div>
         <div className="homeDirections__mobileImage">
           <Image src={assetPath("/assets/products/bathrobe/bathrobe-embroidery.webp")} alt="Вафельный текстиль с вышивкой VIRDEN" fill quality={92} sizes="(max-width: 720px) 34vw, 1px" />
@@ -195,7 +196,7 @@ export function HomeFinalCta() {
           <p className="eyebrow eyebrow--light">VIRDEN</p>
           <h2 id="final-cta-title">Оснащение, собранное вокруг вашего объекта</h2>
         </div>
-        <ActionLink href="#project-request" variant="secondary">
+        <ActionLink href={contactUrl} variant="secondary">
           Обсудить проект
         </ActionLink>
       </div>

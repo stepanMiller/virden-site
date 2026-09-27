@@ -2,6 +2,7 @@ import Image from "next/image";
 import { HeroMedia } from "@/components/media/hero-media";
 import { ActionLink } from "@/components/ui/action-link";
 import { heroMedia, homeContent } from "@/content/home";
+import { contactUrl } from "@/content/contact";
 
 function HeroProofIcon({ index }: { index: number }) {
   const paths = [
@@ -29,7 +30,7 @@ export function HomeHero() {
           <h1 id="home-hero-title">{homeContent.title}</h1>
           <p className="homeHero__description">{homeContent.description}</p>
           <div className="homeHero__actions">
-            <ActionLink href="#project-request">{homeContent.primaryCta}</ActionLink>
+            <ActionLink href={contactUrl}>{homeContent.primaryCta}</ActionLink>
           </div>
         </div>
         <p className="homeHero__motto">Создаём<br />пространства,<br />в которые<br />хочется<br />возвращаться</p>

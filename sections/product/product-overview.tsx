@@ -1,4 +1,5 @@
 import { ActionLink } from "@/components/ui/action-link";
+import { contactUrl } from "@/content/contact";
 import type { Product } from "@/content/products";
 
 export function ProductOverview({ product }: { product: Product }) {
@@ -35,8 +36,8 @@ export function ProductOverview({ product }: { product: Product }) {
 export function ProductActions() {
   return (
     <div className="productOverview__actions">
-      <ActionLink href="#project-request">Запросить коммерческое предложение</ActionLink>
-      <ActionLink href="#personalization" variant="secondary">Обсудить образец</ActionLink>
+      <ActionLink href={contactUrl}>Запросить коммерческое предложение</ActionLink>
+      <ActionLink href={contactUrl} variant="secondary">Обсудить образец</ActionLink>
     </div>
   );
 }

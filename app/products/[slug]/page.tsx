@@ -10,6 +10,7 @@ import { ProductGallery } from "@/sections/product/product-gallery";
 import { ProductActions, ProductOverview } from "@/sections/product/product-overview";
 import { QualitySection } from "@/sections/product/quality-section";
 import { pageMetadata } from "@/lib/metadata";
+import { contactUrl } from "@/content/contact";
 
 type ProductPageProps = {
   params: Promise<{ slug: string }>;
@@ -71,9 +72,9 @@ export default async function ProductPage({ params }: ProductPageProps) {
               <h2 id="product-closing-title">Продукт под стандарт вашего объекта</h2>
               <p>Финальные параметры, образец и комплектация согласуются в проектной спецификации.</p>
             </div>
-            <Link className="productClosing__link" href="#project-request">
+            <a className="productClosing__link" href={contactUrl} target="_blank" rel="noopener noreferrer">
               Обсудить поставку <span aria-hidden="true">→</span>
-            </Link>
+            </a>
           </div>
         </section>
       </main>

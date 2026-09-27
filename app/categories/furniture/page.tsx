@@ -5,6 +5,7 @@ import { SiteFooter } from "@/components/layout/site-footer";
 import { SiteHeader } from "@/components/layout/site-header";
 import { ActionLink } from "@/components/ui/action-link";
 import { furnitureContent } from "@/content/furniture";
+import { contactUrl } from "@/content/contact";
 import { ProductGallery } from "@/sections/product/product-gallery";
 import styles from "./page.module.css";
 
@@ -56,7 +57,7 @@ export default function FurniturePage() {
             </p>
           </div>
           <div className="productOverview__actions">
-            <ActionLink href="#project-request">Обсудить проект</ActionLink>
+            <ActionLink href={contactUrl}>Обсудить проект</ActionLink>
             <ActionLink href="#furniture-directions" variant="secondary">Смотреть направления</ActionLink>
           </div>
         </section>
@@ -92,7 +93,7 @@ export default function FurniturePage() {
               <h2 id="furniture-closing-title">Мебель под требования вашего объекта</h2>
               <p>Обсудим задачу, параметры и состав комплектации.</p>
             </div>
-            <ActionLink href="#project-request" variant="secondary">Обсудить проект</ActionLink>
+            <ActionLink href={contactUrl} variant="secondary">Обсудить проект</ActionLink>
           </div>
         </section>
       </main>

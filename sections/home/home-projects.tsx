@@ -11,6 +11,7 @@ export function HomeProjects() {
         <h2 id="projects-title">Решения под задачу объекта</h2>
         <p>Реализованные поставки в разных направлениях оснащения.</p>
       </div>
+      <p className={styles.imageNote}>Изображения иллюстрируют направления проектов и не являются фотографиями поставленных изделий.</p>
 
       <div className={styles.grid}>
         {projectCases.map((project, index) => (
@@ -34,7 +35,6 @@ export function HomeProjects() {
           </article>
         ))}
       </div>
-      <p className={styles.imageNote}>Изображения иллюстрируют направления проектов и не являются фотографиями поставленных изделий.</p>
     </section>
   );
 }

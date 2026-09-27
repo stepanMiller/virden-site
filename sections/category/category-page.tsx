@@ -5,6 +5,7 @@ import { SiteFooter } from "@/components/layout/site-footer";
 import { ActionLink } from "@/components/ui/action-link";
 import { ProductGallery } from "@/sections/product/product-gallery";
 import { illustrationNote, type CategoryContent } from "@/content/category";
+import { contactUrl } from "@/content/contact";
 import styles from "./category-page.module.css";
 
 export function CategoryPage({ content }: { content: CategoryContent }) {
@@ -31,7 +32,7 @@ export function CategoryPage({ content }: { content: CategoryContent }) {
             <p className={styles.specificationNote}>{content.specificationNote}</p>
           </div>
           <div className="productOverview__actions">
-            <ActionLink href="#project-request">Обсудить проект</ActionLink>
+            <ActionLink href={contactUrl}>Обсудить проект</ActionLink>
             <ActionLink href={`#${id}-directions`} variant="secondary">Смотреть направления</ActionLink>
           </div>
         </section>
@@ -46,7 +47,7 @@ export function CategoryPage({ content }: { content: CategoryContent }) {
           <p className={styles.imageNote}>{illustrationNote}</p>
         </section>
         <section className="productClosing materialBurgundy" aria-labelledby={`${id}-closing-title`}>
-          <div className="shell productClosing__inner"><div><p className="eyebrow eyebrow--light">VIRDEN</p><h2 id={`${id}-closing-title`}>{content.closingTitle}</h2><p>{content.closingDescription}</p></div><ActionLink href="#project-request" variant="secondary">Обсудить проект</ActionLink></div>
+          <div className="shell productClosing__inner"><div><p className="eyebrow eyebrow--light">VIRDEN</p><h2 id={`${id}-closing-title`}>{content.closingTitle}</h2><p>{content.closingDescription}</p></div><ActionLink href={contactUrl} variant="secondary">Обсудить проект</ActionLink></div>
         </section>
       </main>
       <SiteFooter />
