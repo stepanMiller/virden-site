@@ -1282,6 +1282,20 @@ button {
   text-transform: uppercase;
 }
 
+.siteFooter__analyticsNotice {
+  max-width: 65rem;
+  padding-bottom: 1.2rem;
+  color: color-mix(in srgb, var(--color-cream) 72%, transparent);
+  font-size: 0.72rem;
+  line-height: 1.5;
+}
+
+.siteFooter__analyticsNotice a {
+  color: var(--color-cream);
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
+}
+
 @media (max-width: 1180px) {
   .productHero {
     grid-template-columns: minmax(0, 1fr) minmax(22rem, 0.95fr);
