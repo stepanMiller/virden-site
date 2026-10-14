@@ -1,0 +1,141 @@
+.positioning {
+  max-width: 29rem;
+  margin: 1rem 0 0.85rem;
+  color: var(--color-royal-burgundy);
+  font-family: var(--font-display);
+  font-size: clamp(1.55rem, 2.1vw, 2.1rem);
+  line-height: 1.12;
+}
+
+.specificationNote {
+  margin: 2rem 0 0;
+  border-top: 1px solid var(--color-line);
+  padding-top: 1rem;
+  color: var(--color-muted);
+  font-size: 0.75rem;
+  line-height: 1.5;
+}
+
+.directionImage {
+  aspect-ratio: 1122 / 1402;
+}
+
+.directionImage img {
+  object-fit: cover;
+}
+
+.customization {
+  display: grid;
+  grid-template-columns: minmax(18rem, 0.82fr) minmax(0, 1.18fr);
+  background: var(--color-surface);
+}
+
+.customizationImage {
+  position: relative;
+  min-height: 35rem;
+  overflow: hidden;
+}
+
+.customizationImage img {
+  object-fit: cover;
+  object-position: center;
+}
+
+.customizationCopy {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: clamp(3rem, 7vw, 7rem);
+}
+
+.customizationCopy h2 {
+  margin: 1rem 0 0;
+  font-family: var(--font-display);
+  font-size: clamp(2.5rem, 4.8vw, 5rem);
+  font-weight: 400;
+  letter-spacing: -0.045em;
+  line-height: 0.96;
+}
+
+.customizationCopy > p:not(.eyebrow) {
+  max-width: 39rem;
+  margin: 1.4rem 0 0;
+  color: var(--color-muted);
+}
+
+.customizationCopy ul {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin: 2.5rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.customizationCopy li {
+  border-top: 1px solid var(--color-line);
+  padding: 0.9rem 0.5rem 1.1rem 0;
+  color: var(--color-royal-burgundy);
+  font-size: 0.76rem;
+}
+
+.page :global(.productClosing .actionLink--secondary) {
+  border-color: var(--color-cream);
+  color: var(--color-cream);
+}
+
+@media (max-width: 900px) {
+  .customization {
+    grid-template-columns: 1fr;
+  }
+
+  .customizationImage {
+    min-height: 28rem;
+  }
+
+  .customizationCopy {
+    padding: 3.5rem var(--gutter);
+  }
+}
+
+@media (max-width: 540px) {
+  .positioning {
+    font-size: clamp(1.1rem, 4.6vw, 1.45rem);
+  }
+
+  .page :global(.productOverview__description) {
+    font-size: 0.68rem;
+  }
+
+  .page :global(.benefitGrid small) {
+    font-size: 0.55rem;
+  }
+
+  .page :global(.detailGrid) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+  }
+
+  .page :global(.detailCard h3) {
+    font-size: 1.08rem;
+  }
+
+  .page :global(.detailCard p) {
+    font-size: 0.73rem;
+  }
+
+  .page :global(.detailCard:last-child) {
+    grid-column: 1 / -1;
+  }
+
+  .page :global(.detailCard:last-child .detailCard__image) {
+    max-height: 22rem;
+  }
+
+  .customizationImage {
+    min-height: 23rem;
+  }
+
+  .customizationCopy ul {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}

@@ -1,0 +1,62 @@
+.positioning {
+  max-width: 29rem;
+  margin: 1rem 0 0.85rem;
+  color: var(--color-royal-burgundy);
+  font-family: var(--font-display);
+  font-size: clamp(1.55rem, 2.1vw, 2.1rem);
+  line-height: 1.12;
+}
+
+.specificationNote {
+  margin: 2rem 0 0;
+  border-top: 1px solid var(--color-line);
+  padding-top: 1rem;
+  color: var(--color-muted);
+  font-size: 0.75rem;
+  line-height: 1.5;
+}
+
+.page :global(.productGallery__main),
+.page :global(.detailCard__image) {
+  aspect-ratio: 4 / 3;
+}
+
+.page :global(.productClosing .actionLink--secondary) {
+  border-color: var(--color-cream);
+  color: var(--color-cream);
+}
+
+@media (max-width: 540px) {
+  .positioning {
+    font-size: clamp(1.1rem, 4.6vw, 1.45rem);
+  }
+
+  .page :global(.productOverview__description) {
+    font-size: 0.68rem;
+  }
+
+  .page :global(.benefitGrid small) {
+    font-size: 0.55rem;
+  }
+
+  .page :global(.detailGrid) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+  }
+
+  .page :global(.detailCard h3) {
+    font-size: 1.08rem;
+  }
+
+  .page :global(.detailCard p) {
+    font-size: 0.73rem;
+  }
+
+  .page :global(.detailCard:last-child) {
+    grid-column: 1 / -1;
+  }
+
+  .page :global(.detailCard:last-child .detailCard__image) {
+    max-height: 22rem;
+  }
+}
